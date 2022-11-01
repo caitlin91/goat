@@ -1,0 +1,6 @@
+\beamer@sectionintoc {1}{Research Questions}{3}{0}{1}
+\beamer@sectionintoc {2}{Why Dynamic Data?}{11}{0}{2}
+\beamer@subsectionintoc {2}{1}{The \textsc {goat}\nobreakspace {}vowel}{18}{0}{2}
+\beamer@sectionintoc {3}{Data Collection}{23}{0}{3}
+\beamer@sectionintoc {4}{Analysis}{26}{0}{4}
+\beamer@sectionintoc {5}{Future Analysis}{30}{0}{5}

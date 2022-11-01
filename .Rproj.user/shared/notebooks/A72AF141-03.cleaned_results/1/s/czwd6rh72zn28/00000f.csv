@@ -1,0 +1,3 @@
+"0","DF <- import(""02.data_typofixes.csv"")"
+"0","openaccessDF <- import(""../analysis/OA_Coding_10_2021.xlsx"") %>% select(-`...9`) %>% filter(!is.na(row_num))"
+"2","New names:"

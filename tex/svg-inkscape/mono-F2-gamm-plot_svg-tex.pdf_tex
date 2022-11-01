@@ -1,0 +1,197 @@
+%% Creator: Inkscape 1.1 (c68e22c387, 2021-05-23), www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'mono-F2-gamm-plot_svg-tex.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{576bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.5)%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{mono-F2-gamm-plot_svg-tex.pdf}}%
+    \put(0.13144097,0.23230902){\color[rgb]{0.10196078,0.10196078,0.10196078}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Male\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{mono-F2-gamm-plot_svg-tex.pdf}}%
+    \put(0.13144097,0.20293403){\color[rgb]{0.10196078,0.10196078,0.10196078}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Old\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{mono-F2-gamm-plot_svg-tex.pdf}}%
+    \put(0.23576389,0.23230902){\color[rgb]{0.10196078,0.10196078,0.10196078}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Male\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{mono-F2-gamm-plot_svg-tex.pdf}}%
+    \put(0.23576389,0.20293403){\color[rgb]{0.10196078,0.10196078,0.10196078}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Young\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=5]{mono-F2-gamm-plot_svg-tex.pdf}}%
+    \put(0.13144097,0.4300868){\color[rgb]{0.10196078,0.10196078,0.10196078}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Female\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=6]{mono-F2-gamm-plot_svg-tex.pdf}}%
+    \put(0.13144097,0.40072917){\color[rgb]{0.10196078,0.10196078,0.10196078}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Old\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=7]{mono-F2-gamm-plot_svg-tex.pdf}}%
+    \put(0.23576389,0.4300868){\color[rgb]{0.10196078,0.10196078,0.10196078}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Female\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=8]{mono-F2-gamm-plot_svg-tex.pdf}}%
+    \put(0.23576389,0.40072917){\color[rgb]{0.10196078,0.10196078,0.10196078}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Young\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=9]{mono-F2-gamm-plot_svg-tex.pdf}}%
+    \put(0.08835069,0.04468748){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}0\end{tabular}}}}%
+    \put(0.13144097,0.04468748){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}50\end{tabular}}}}%
+    \put(0.17453125,0.04468748){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}100\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=10]{mono-F2-gamm-plot_svg-tex.pdf}}%
+    \put(0.19267362,0.04468748){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}0\end{tabular}}}}%
+    \put(0.23576389,0.04468748){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}50\end{tabular}}}}%
+    \put(0.27885416,0.04468748){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}100\end{tabular}}}}%
+    \put(0.07548611,0.25894096){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}250\end{tabular}}}}%
+    \put(0.07548611,0.27624999){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}500\end{tabular}}}}%
+    \put(0.07548611,0.29355902){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}750\end{tabular}}}}%
+    \put(0.07548611,0.31088542){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}1000\end{tabular}}}}%
+    \put(0.07548611,0.32819445){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}1250\end{tabular}}}}%
+    \put(0.07548611,0.34552083){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}1500\end{tabular}}}}%
+    \put(0.07548611,0.36282986){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}1750\end{tabular}}}}%
+    \put(0.07548611,0.38015625){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}2000\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=11]{mono-F2-gamm-plot_svg-tex.pdf}}%
+    \put(0.07548611,0.06114584){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}250\end{tabular}}}}%
+    \put(0.07548611,0.07847222){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}500\end{tabular}}}}%
+    \put(0.07548611,0.09578125){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}750\end{tabular}}}}%
+    \put(0.07548611,0.11310763){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}1000\end{tabular}}}}%
+    \put(0.07548611,0.13041666){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}1250\end{tabular}}}}%
+    \put(0.07548611,0.14772569){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}1500\end{tabular}}}}%
+    \put(0.07548611,0.1650521){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}1750\end{tabular}}}}%
+    \put(0.07548611,0.1823611){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}2000\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=12]{mono-F2-gamm-plot_svg-tex.pdf}}%
+    \put(0.1836111,0.02305555){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Percentage duration through the vowel\end{tabular}}}}%
+    \put(0.03270833,0.22784722){\rotatebox{90}{\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Model fit F2 (Hz)\end{tabular}}}}}%
+    \put(0.08404514,0.46456597){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}CoRP-SE\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=13]{mono-F2-gamm-plot_svg-tex.pdf}}%
+    \put(0.41460069,0.23230902){\color[rgb]{0.10196078,0.10196078,0.10196078}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Male\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=14]{mono-F2-gamm-plot_svg-tex.pdf}}%
+    \put(0.41460069,0.20293403){\color[rgb]{0.10196078,0.10196078,0.10196078}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Old\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=15]{mono-F2-gamm-plot_svg-tex.pdf}}%
+    \put(0.5189236,0.23230902){\color[rgb]{0.10196078,0.10196078,0.10196078}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Male\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=16]{mono-F2-gamm-plot_svg-tex.pdf}}%
+    \put(0.5189236,0.20293403){\color[rgb]{0.10196078,0.10196078,0.10196078}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Young\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=17]{mono-F2-gamm-plot_svg-tex.pdf}}%
+    \put(0.41460069,0.4300868){\color[rgb]{0.10196078,0.10196078,0.10196078}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Female\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=18]{mono-F2-gamm-plot_svg-tex.pdf}}%
+    \put(0.41460069,0.40072917){\color[rgb]{0.10196078,0.10196078,0.10196078}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Old\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=19]{mono-F2-gamm-plot_svg-tex.pdf}}%
+    \put(0.5189236,0.4300868){\color[rgb]{0.10196078,0.10196078,0.10196078}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Female\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=20]{mono-F2-gamm-plot_svg-tex.pdf}}%
+    \put(0.5189236,0.40072917){\color[rgb]{0.10196078,0.10196078,0.10196078}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Young\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=21]{mono-F2-gamm-plot_svg-tex.pdf}}%
+    \put(0.37151043,0.04468748){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}0\end{tabular}}}}%
+    \put(0.41460069,0.04468748){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}50\end{tabular}}}}%
+    \put(0.45769098,0.04468748){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}100\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=22]{mono-F2-gamm-plot_svg-tex.pdf}}%
+    \put(0.47583331,0.04468748){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}0\end{tabular}}}}%
+    \put(0.5189236,0.04468748){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}50\end{tabular}}}}%
+    \put(0.56201389,0.04468748){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}100\end{tabular}}}}%
+    \put(0.35864584,0.25894096){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}250\end{tabular}}}}%
+    \put(0.35864584,0.27624999){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}500\end{tabular}}}}%
+    \put(0.35864584,0.29355902){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}750\end{tabular}}}}%
+    \put(0.35864584,0.31088542){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}1000\end{tabular}}}}%
+    \put(0.35864584,0.32819445){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}1250\end{tabular}}}}%
+    \put(0.35864584,0.34552083){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}1500\end{tabular}}}}%
+    \put(0.35864584,0.36282986){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}1750\end{tabular}}}}%
+    \put(0.35864584,0.38015625){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}2000\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=23]{mono-F2-gamm-plot_svg-tex.pdf}}%
+    \put(0.35864584,0.06114584){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}250\end{tabular}}}}%
+    \put(0.35864584,0.07847222){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}500\end{tabular}}}}%
+    \put(0.35864584,0.09578125){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}750\end{tabular}}}}%
+    \put(0.35864584,0.11310763){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}1000\end{tabular}}}}%
+    \put(0.35864584,0.13041666){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}1250\end{tabular}}}}%
+    \put(0.35864584,0.14772569){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}1500\end{tabular}}}}%
+    \put(0.35864584,0.1650521){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}1750\end{tabular}}}}%
+    \put(0.35864584,0.1823611){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}2000\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=24]{mono-F2-gamm-plot_svg-tex.pdf}}%
+    \put(0.46677079,0.02305555){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Percentage duration through the vowel\end{tabular}}}}%
+    \put(0.31586806,0.22784722){\rotatebox{90}{\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Model fit F2 (Hz)\end{tabular}}}}}%
+    \put(0.36720485,0.46456597){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}CoRP-NE\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=25]{mono-F2-gamm-plot_svg-tex.pdf}}%
+    \put(0.69776042,0.23230902){\color[rgb]{0.10196078,0.10196078,0.10196078}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Male\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=26]{mono-F2-gamm-plot_svg-tex.pdf}}%
+    \put(0.69776042,0.20293403){\color[rgb]{0.10196078,0.10196078,0.10196078}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Young\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=27]{mono-F2-gamm-plot_svg-tex.pdf}}%
+    \put(0.75899304,0.24248264){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}0\end{tabular}}}}%
+    \put(0.80208333,0.24248264){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}50\end{tabular}}}}%
+    \put(0.84517362,0.24248264){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}100\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=28]{mono-F2-gamm-plot_svg-tex.pdf}}%
+    \put(0.69776042,0.4300868){\color[rgb]{0.10196078,0.10196078,0.10196078}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Female\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=29]{mono-F2-gamm-plot_svg-tex.pdf}}%
+    \put(0.69776042,0.40072917){\color[rgb]{0.10196078,0.10196078,0.10196078}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Old\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=30]{mono-F2-gamm-plot_svg-tex.pdf}}%
+    \put(0.80208333,0.4300868){\color[rgb]{0.10196078,0.10196078,0.10196078}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Male\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=31]{mono-F2-gamm-plot_svg-tex.pdf}}%
+    \put(0.80208333,0.40072917){\color[rgb]{0.10196078,0.10196078,0.10196078}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Old\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=32]{mono-F2-gamm-plot_svg-tex.pdf}}%
+    \put(0.65467013,0.04468748){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}0\end{tabular}}}}%
+    \put(0.69776042,0.04468748){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}50\end{tabular}}}}%
+    \put(0.74086804,0.04468748){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}100\end{tabular}}}}%
+    \put(0.64180554,0.25894096){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}250\end{tabular}}}}%
+    \put(0.64180554,0.27624999){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}500\end{tabular}}}}%
+    \put(0.64180554,0.29355902){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}750\end{tabular}}}}%
+    \put(0.64180554,0.31088542){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}1000\end{tabular}}}}%
+    \put(0.64180554,0.32819445){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}1250\end{tabular}}}}%
+    \put(0.64180554,0.34552083){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}1500\end{tabular}}}}%
+    \put(0.64180554,0.36282986){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}1750\end{tabular}}}}%
+    \put(0.64180554,0.38015625){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}2000\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=33]{mono-F2-gamm-plot_svg-tex.pdf}}%
+    \put(0.64180554,0.06114584){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}250\end{tabular}}}}%
+    \put(0.64180554,0.07847222){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}500\end{tabular}}}}%
+    \put(0.64180554,0.09578125){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}750\end{tabular}}}}%
+    \put(0.64180554,0.11310763){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}1000\end{tabular}}}}%
+    \put(0.64180554,0.13041666){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}1250\end{tabular}}}}%
+    \put(0.64180554,0.14772569){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}1500\end{tabular}}}}%
+    \put(0.64180554,0.1650521){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}1750\end{tabular}}}}%
+    \put(0.64180554,0.1823611){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}2000\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=34]{mono-F2-gamm-plot_svg-tex.pdf}}%
+    \put(0.74993053,0.02305555){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Percentage duration through the vowel\end{tabular}}}}%
+    \put(0.59902778,0.22784722){\rotatebox{90}{\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Model fit F2 (Hz)\end{tabular}}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=35]{mono-F2-gamm-plot_svg-tex.pdf}}%
+    \put(0.92473963,0.31576388){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Lexical Set\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=36]{mono-F2-gamm-plot_svg-tex.pdf}}%
+    \put(0.91753472,0.28458333){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}HOLE\end{tabular}}}}%
+    \put(0.91753472,0.25458333){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}HOPE\end{tabular}}}}%
+    \put(0.91753472,0.22458333){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}HOLE\end{tabular}}}}%
+    \put(0.91753472,0.19458334){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}HOPE\end{tabular}}}}%
+    \put(0.91753472,0.16458334){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}HOLE\end{tabular}}}}%
+    \put(0.91753472,0.13458334){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}HOPE\end{tabular}}}}%
+    \put(0.65036456,0.46456597){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}DECTE\end{tabular}}}}%
+  \end{picture}%
+\endgroup%

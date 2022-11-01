@@ -1,0 +1,1113 @@
+% !TeX TXS-program:compile = txs:///pdflatex/[--shell-escape]
+\documentclass[../../../00.FullDoc/tex/Thesis]{subfiles}
+
+
+
+\title{Analysis - \scs{Goat}}
+\author{Caitlin Halfacre}
+\date{\today}
+
+\begin{document}
+
+	\onlyinsubfile{
+	\maketitle
+	\pagebreak
+	\tableofcontents
+	\onehalfspacing
+				}
+	\pagestyle{scrheadings}
+	
+\section{Introduction} \label{sec:GGintroduction}
+As discussed in chapter \onlyinsubfile{3}\notinsubfile{\ref{ch:LitReview}}, the \goat{} vowel is predictably a diphthong in the South East (usually [\textipa{oU}] or [\textipa{@U}]) but highly variable in the North East, including (in addition to the nationally common diphthong) two monophthongal variants ([\textipa{o:}] and occasionally [\textipa{8}]) and a centring diphthong ([\textipa{U@}]).
+
+In order to determine which variants were present in each group of speakers, the particular variation caused by the following /l/ environment, and hence the \goat{} split, multiple levels of analysis were undertaken.
+
+First, the monosyllabic tokens in non pre-/l/ condition was modelled separately, to understand the general variation of the \goat{} vowel, then modelled together with the monosyllabic pre-/l/ condition to consider the behaviour of the simple split (\GG{}).
+
+Next the three pre-/l/ contexts (\textit{hole, holy, holey}) were modelled together to understand the interactions between pre-/l/ variation and morphological conditioning.
+
+\section{Modelling of the \goat{} vowel}
+This section will expand on the modelling procedure described in chapter \onlyinsubfile{4}\notinsubfile{ch:Methodology} and describe the specific modelling decisions made throughout the analysis.
+
+The \goat{} vowel analysis was conducted using generalised additive mixed models in order to capture the variation within the vowel trajectory and adequately compare diphthongal and monophthongal variation between speakers and context. All GAMMs included demographic and phonological environment predictors.
+
+Models were built according to procedures laid out by \cite{Soskuthy2017},  Coretta \todoreference{Stefano}, and \cite{Stanley2021} (one of the most recent sociolinguistic publications to use dynamic modelling).
+Parametric terms were used to capture overall differences in height of trajectories \citep{Soskuthy2017}, a single smooth was fit at the reference levels (term = s(measurement.no)) and difference smooths (term = s(x, by=y)) to quantify the difference between the reference level and other levels of the predictor. Since duration can have an effect on the overall trajectory shape a tensor product interaction between duration and measurement number, this effectively controls for the effect of duration.
+The models were built stepwise (manually) by adding predictors and using the compareML() function from the itsadug package \citep{itsadug} to test whether the predictor improved the model fit. gam.check(), from the mgcv package \cite{mgcv} was used to check the appropriate number of knots was used in each smooth (the number of knots determines how much \quotesingle{wiggliness} is allowed in the spline and too high a value can lead to over smoothing). Full code of the model selection process can be found in the github repositories listed in Appendix \ref{app:github}. 
+least fit model included lexical set (or corpus for the \hope{} context only models) , and the other potential terms were:
+\begin{itemize}
+	\item age group (parametric term and difference smooth)
+	\item sex (parametric term and difference smooth)
+	\item preceding segment (difference smooth, because parametric terms cannot be controlled for when extracting model predictions)
+	\item an interaction including any 2-3 terms of lexical set, age group, and sex (parametric term and difference smooth)
+	\item duration (tensor product interaction with measurement no.)
+	\item individual speaker (random smooth)
+	\item word (random smooth)
+\end{itemize}
+
+
+Plots were made from model predictions, exported using the predict\_gam() function from the tidymv package \citep{tidymv2020}, which excludes terms that are not wanted for plotting by setting them to 0 and calculating predictions from the model (as stated above, the predict\_gam() function cannot exclude parametric terms, therefore since preceding segment was included as a control rather than as expected phonological variation it was only included in a smooth term). The confidence intervals are plotted using the geom\_smooth\_ci() function from the same package. The default package settings were used, a z-value of 1.96 for 95\% confidence intervals.
+
+\citet{Stanley2021} notes that the output of GAMMs are long and complex and hence interpretation of results are often dependent on visualisation of the predicted values from the models. Throughout this chapter, graphs created as described above are used to interpret the results, primarily focussing on the predictors relevant to the research questions but also assessing statistically significant predictors within those groups.
+
+
+\section{\scs{Goat} vowel in \textit{hope} context only} \label{sec:GGhope}
+To understand only the \hope{} variation models were built of the \goat{} vowel tokens without any following lateral, including corpus as a predictor. It was found that in F1 CoRP-NE behaved like CoRP-SE, with a downward trajectory, while DECTE speakers had a flatter trajectory, and in F2 there was less variation between the three speaker groups apart from the older DECTE speakers having a less front vowels (lower F2). Details on the analysis below.
+
+\subsection{\hope{} F1} \label{subsec:hopeF1}
+The best fit model of F1 is shown in tables \ref{tbl:hopeF1-para} and \ref{tbl:hopeF1-smooth}; it included an interaction between corpus and speaker sex but as can be seen in figure \ref{fig:hopeF1} the difference between male and female speakers is not significant. Table \ref{tbl:hopeF1-para} shows that the midpoint measurements vary from 574Hz (Female, DECTE) to 609Hz (Male SE), a range of 35Hz. The mean midpoint (below) does not vary in any meaningful way between the speaker groups.
+\begin{itemize}
+	\item CoRP-SE: 601Hz
+	\item DECTE: 578Hz
+	\item CoRP-NE: 582Hz
+\end{itemize}
+The random smooths and tensor product interaction between measurement number and duration are significant. Preceding segment had improved the model fit but has very little impact on the trajectory shape. The effect of corpus can be most clearly seen in figure \ref{fig:hopeF1}. CoRP-SE speakers show a downward change in F1, demonstrating a diphthong that moves upwards in the acoustic vowel space, as would be expected in a change from [\textschwa{}] to [\textbaru{}] or [u]. DECTE speakers show less change, implying little to no change in vowel height, potentially implying a monophthongal vowel. The CoRP-NE speakers show a similar trajectory shape to the CoRP-SE speakers, though with perhaps a slightly lower start point and slightly higher end point leading to a marginally flatter trajectory (see figure \ref{fig:hopeF1}).
+
+\begin{table}[htbp]
+	\centering
+	\begin{tabular}{lrrrr}
+		\hline
+		& Estimate & Std.Error & t-value & Pr (>|t|) \\
+		\hline
+		(Intercept) & 576.42 & 5.94 & 96.99 & <2e-16 \\
+		sex\_corpMale.CoRP-NE & 11.30 & 8.14 & 1.39 & 0.16 \\
+		sex\_corpFemale.CoRP-SE & 16.81 & 8.70 & 1.93 & 0.05 \\
+		sex\_corpMale.CoRP-SE & 33.01 & 9.66 & 3.42 & 0.00 \\
+		sex\_corpFemale.DECTE-NE & -2.31 & 9.59 & -0.24 & 0.81 \\
+		sex\_corpMale.DECTE-NE & 5.4 & 11.51 & 0.47 & 0.64 \\
+		\hline
+	\end{tabular}%
+	\caption{table showing parametric terms of the model of F1 in \hope{} words}
+	\label{tbl:hopeF1-para}%
+\end{table}%
+
+\begin{table}[htbp]
+	\centering
+	\begin{tabular}{lrr}
+		\hline
+		& edf & p-value \\
+		\hline
+		s(measurement.no) & 6.51e+00 & <2e-16 \\
+		s(measurement.no):sex\_corpMale.CoRP-NE & 1.00e+00 & 0.06 \\
+		s(measurement.no):sex\_corpFemale.CoRP-SE & 4.13e+00 & 4.60e-05 \\
+		s(measurement.no):sex\_corpMale.CoRP-SE & 1.00e+00 & 0.25 \\
+		s(measurement.no):sex\_corpFemale.DECTE-NE & 4.33e+00 & 0.00 \\
+		s(measurement.no):sex\_corpMale.DECTE-NE & 3.21e+00 & 0.01 \\
+		s(measurement.no):preSegliquid & 1.00e+00 & 0.71 \\
+		s(measurement.no):preSegnasal\_apical & 1.00e+00 & 0.45 \\
+		s(measurement.no):preSegnasal\_labial & 1.00e+00 & 0.77 \\
+		s(measurement.no):preSegnone & 1.00e+00 & 0.39 \\
+		s(measurement.no):preSegobstruent\_liquid & 2.34e+00 & 0.14 \\
+		s(measurement.no):preSegoral\_apical & 1.00e+00 & 0.87 \\
+		s(measurement.no):preSegoral\_labial & 1.407e+00 & 0.82 \\
+		s(measurement.no):preSegpalatal & 4.31e-01 & 0.89 \\
+		s(measurement.no):preSegvelar & 1.001e+00 & 0.61 \\
+		s(measurement.no):folManaffricate & 1.00e+00 & 0.48 \\
+		s(measurement.no):folManfricative & 2.09e+00 & 0.61 \\
+		s(measurement.no):folManlateral & 2.12e-04 & 0.50 \\
+		s(measurement.no):folMannasal & 1.00e+00 & 0.92 \\
+		s(measurement.no):folMannone & 1.00e+00 & 0.70 \\
+		s(measurement.no):folManstop & 3.90e+00 & 0.00 \\
+		s(measurement.no):folPlaceapical & 1.43e+00 & 0.73 \\
+		s(measurement.no):folPlaceinterdental & 1.00e+00 & 0.80 \\
+		s(measurement.no):folPlacelabial & 1.00e+00 & 0.84 \\
+		s(measurement.no):folPlacelabiodental & 1.00e+00 & 0.75 \\
+		s(measurement.no):folPlacenone & 1.00e+00 & 0.70 \\
+		s(measurement.no):folPlacepalatal & 4.42e-01 & 0.89 \\
+		s(measurement.no):folPlacevelar & 1.00e+00 & 0.78 \\
+		ti(measurement.no,dur) & 1.18e+01 & <2e-16 \\
+		s(measurement.no,id) & 5.17e+01 & <2e-16 \\
+		s(measurement.no,word) & 3.10e+02 & <2e-16 \\
+		\hline
+	\end{tabular}
+	\caption{table showing smooth terms of the model of F1 in \hope{} wordss}
+	\label{tbl:hopeF1-smooth}
+\end{table}
+
+\begin{figure}[h]
+	\includesvg[width=\textwidth]{../figures/hope-F1-gamm-plot.svg}
+	\caption{GAMM plot of F1 of hope in CoRP-SE, DECTE, and CoRP-NE} \label{fig:hopeF1}
+\end{figure}
+
+
+\subsection{\hope{} F2} \label{subsec:hopeF2}
+Tables \ref{tbl:hopeF2-para} and \ref{tbl:hopeF2-smooth} show the best fit model for F2 of the \goat{} vowel in \hope{} contexts only. The model shows a three-way interaction between age group, sex, and corpus, however the differences do not show a clear pattern. The mean midpoints for each corpus are:
+\begin{itemize}
+	\item CoRP-SE: 1647.50 Hz
+	\item DECTE: 1268.50 Hz
+	\item CoRP-NE: 1556.09 Hz
+\end{itemize}
+CoRP-SE speakers have the most front vowel (by midpoint) as supported by the literature, though the difference between them and the CoRP-NE speakers is not significant and may not be meaningful (p>0.05). DECTE speakers have a far further back midpoint, consistent with a monophthong such as [o].
+
+\begin{table}[htbp]
+	\centering
+	\begin{tabular}{lrrrr}
+		\hline
+		& Estimate & Std.Error & t-value & Pr (>|t|) \\
+		\hline
+		(Intercept) & 1508.72 & 57.22 & 26.37 & <2e-16 \\
+		age\_sex\_corpYoung.Female.CoRP-NE & 43.95 & 67.18 & 0.65 & 0.51 \\
+		age\_sex\_corpOld.Male.CoRP-NE & 67.09 & 98.30 & 0.68 & 0.49 \\
+		age\_sex\_corpYoung.Male.CoRP-NE & 78.42 & 69.54 & 1.13 & 0.26 \\
+		age\_sex\_corpOld.Female.CoRP-SE & 52.76 & 80.28 & 0.66 & 0.51 \\
+		age\_sex\_corpYoung.Female.CoRP-SE & 108.26 & 80.27 & 1.35 & 0.18 \\
+		age\_sex\_corpOld.Male.CoRP-SE & 170.70 & 80.37 & 2.12 & 0.03 \\
+		age\_sex\_corpYoung.Male.CoRP-SE & 167.91 & 98.67 & 1.70 & 0.09 \\
+		age\_sex\_corpOld.Female.DECTE-NE & -401.67 & 73.29 & -5.48 & 4.28e-08 \\
+		age\_sex\_corpOld.Male.DECTE-NE & -307.73 & 98.95 & -3.11 & 0.00 \\
+		age\_sex\_corpYoung.Male.DECTE-NE & -11.25 & 99.24 & -0.11 & 0.91 \\
+		\hline
+	\end{tabular}%
+	\caption{table showing parametric terms of the model of F2 in \hope{} words}
+	\label{tbl:hopeF2-para}%
+\end{table}%
+
+As can be seen in figure \ref{fig:hopeF2} The F2 value decreases through the vowel in CoRP-SE speakers, suggesting a diphthong that moves back in the mouth, as would be expected from [\ipa{@U}]. The DECTE speakers have a slightly flatter but not completely straight trajectory shape (the DECTE facet only shows male speakers, there was not enough data to look at young female speakers in DECTE). This could mean that speakers are producing overall a less front vowel than the CoRP-SE speakers (the literature supports RP speakers having a fronter diphthong than other diphthongal variants), and that it is a mixture of a monophthong and a diphthong, but the difference is not capture by any of the predictors in the model. 
+The parametric and smooth terms both suggest that CoRP-NE speakers are producing a non-regional variant of \goat{}.
+
+\begin{table}[hbtp]
+	\centering
+	\begin{tabular}{lrr}
+		\hline
+		& edf & p-value \\
+		\hline
+		s(measurement.no) & 1.00e+00 & 0.05 \\
+		s(measurement.no):age\_sex\_corpYoung.Female.CoRP-NE & 2.75e+00 & 0.39 \\
+		s(measurement.no):age\_sex\_corpOld.Male.CoRP-NE & 1.00e+00 & 0.46 \\
+		s(measurement.no):age\_sex\_corpYoung.Male.CoRP-NE & 1.00e+00 & 0.71 \\
+		s(measurement.no):age\_sex\_corpOld.Female.CoRP-SE & 1.00e+00 & 1.00 \\
+		s(measurement.no):age\_sex\_corpYoung.Female.CoRP-SE & 1.00e+00 & 0.52 \\
+		s(measurement.no):age\_sex\_corpOld.Male.CoRP-SE & 1.00e+00 & 0.42 \\
+		s(measurement.no):age\_sex\_corpYoung.Male.CoRP-SE & 1.00e+00 & 0.39 \\
+		s(measurement.no):age\_sex\_corpOld.Female.DECTE-NE & 3.30e+00 & 0.07 \\
+		s(measurement.no):age\_sex\_corpOld.Male.DECTE-NE & 1.29e+0 & 0.56 \\
+		s(measurement.no):age\_sex\_corpYoung.Male.DECTE-NE & 2.35e+00 & 0.19 \\
+		s(measurement.no):preSegliquid & 1.00e+00 & 1.75e-05 \\
+		s(measurement.no):preSegnasal\_apical & 4.21e+00 & 0.00 \\
+		s(measurement.no):preSegnasal\_labial & 3.10e+00 & <2e-16 \\
+		s(measurement.no):preSegnone & 2.378e+00 & 0.10 \\
+		s(measurement.no):preSegobstruent\_liquid & 1.00e+00 8.25e-06 \\
+		s(measurement.no):preSegoral\_apical & 1.799e+00 & 0.13 \\
+		s(measurement.no):preSegoral\_labial & 1.002e+00 & 2.05e-06 \\
+		s(measurement.no):preSegpalatal & 4.540e-04 & 0.50 \\
+		s(measurement.no):preSegvelar & 3.56e+00 & 0.00 \\
+		s(measurement.no):folManaffricate & 1.00e+00 & 0.25 \\
+		s(measurement.no):folManfricative & 1.00e+00 & 0.12 \\
+		s(measurement.no):folManlateral & 3.32e-04 & 1.00 \\
+		s(measurement.no):folMannasal & 1.00e+00 & 0.17 \\
+		s(measurement.no):folMannone & 4.81e+00 & 0.01 \\
+		s(measurement.no):folManstop & 1.00e+00 & 0.11 \\
+		s(measurement.no):folPlaceapical & 1.35e+00 & 0.45 \\
+		s(measurement.no):folPlaceinterdental & 1.001e+00 & 0.15 \\
+		s(measurement.no):folPlacelabial & 2.01e+00 & 0.33 \\
+		s(measurement.no):folPlacelabiodental & 1.75e+00 & 0.38 \\
+		s(measurement.no):folPlacenone & 1.01e+00 & 0.96 \\
+		s(measurement.no):folPlacepalatal & 1.07e-03 & 1.00 \\
+		s(measurement.no):folPlacevelar & 1.00e+00 & \\
+		ti(measurement.no,dur) & 1.09e+01 & 0.09 \\
+		s(measurement.no,id) & 5.015e+01 & <2e-16 \\
+		s(measurement.no,word) & 2.821e+02 & <2e-16 \\
+		\hline
+	\end{tabular}
+	\caption{table showing smooth terms of the model of F2 in \hope{} words}
+	\label{tbl:hopeF2-smooth}
+\end{table}
+
+\begin{figure}[h]
+	\includesvg[width=\textwidth]{../figures/hope-F2-gamm-plot.svg}
+	\caption{GAMM plot of F2 of hope in CoRP-SE, DECTE, and CoRP-NE} \label{fig:hopeF2}
+\end{figure}
+
+\subsection{\textit{hope} context summary}
+In summary, CoRP-SE and CoRP-NE show evidence of a diphthong in both the F1 and F2 results, with little to no difference between the speaker groups. The DECTE results show little to no variation in F1 or F2, lending evidence to at least some monophthongal productions. In conclusion, CoRP-NE are showing non-regional behaviour with respect to the \goat{} vowel in \hope{}-like (no pre-/l/) contexts.
+
+
+
+
+%\section{The \goat{} vowel in pre /l/ context (\textit{goal/hole})} \label{sec:hole}
+%
+%\subsection{\textit{hole} - CoRP-SE}
+%\subsubsection{F1}
+%\subsubsection{F2}
+%
+%
+%\subsection{\textit{hole} - DECTE}
+%\subsubsection{F1}
+%\subsubsection{F2}
+%
+%
+%\subsection{\textit{hole} - CoRP-NE}
+%\subsubsection{F1}
+%\subsubsection{F2}
+%
+%\subsection{\textit{hole} - All speakers}
+
+
+\section{The \goat{} split in monosyllabic environments (\hope{} vs \hole{})} \label{sec:GGGOATsplit}
+
+
+\subsection{The \GG{} split in CoRP-SE speakers}
+The \GG{} split as taken from the CoRP-SE speakers is characterised by little to no difference in F1 and a clear difference in F2. \textit{Hole} is less front than hope by more than 550Hz (parametric term, midpoint) and has a significantly different trajectory shape, with more movement seen in an F2 decrease through the vowel. Models and more detailed explanation below.
+
+\subsubsection{F1 of the CoRP-SE speakers}
+The best fit model for F1 of the \GG{} split in the CoRP-SE speakers can be seen in tables \ref{tbl:GGF1SE-para} and \ref{tbl:GGF1SE-smooth}. The best fit model included an interaction between lexical set and speaker sex but there is no significant difference in the trajectory shape between these groups. The only significant term, aside from the random smooths, is the tensor product interaction between measurement.no and duration.
+
+\begin{table}[htbp]
+	\centering
+	\begin{tabular}{lrrrr}
+		\hline
+		& Estimate & Std.Error & t-value & Pr (>|t|) \\
+		\hline
+		(Intercept) & 599.72 & 6.58 & 91.18 & <2e-16 \\
+		sex\_lexSet.L & 0.91 & 8.40 & 0.11 & 0.91 \\
+		sex\_lexSet.Q & -21.30 & 1.73 & -12.29 & <2e-16 \\
+		sex\_lexSet.C & -9.13 & 10.27 & -0.89 & 0.37 \\		
+		\hline
+	\end{tabular}%
+	\caption{table showing parametric terms of the model of F1 in CoRP-SE speakers}
+	\label{tbl:GGF1SE-para}%
+\end{table}%
+
+\begin{table}[htbp]
+	\centering
+	\begin{tabular}{lrr}
+		\hline
+		& edf & p-value \\
+		\hline
+		s(measurement.no) & 6.631 & <2e-16 \\
+		s(measurement.no):sex\_lexSetMale.hope & 1.000 & 0.2726 \\
+		s(measurement.no):sex\_lexSetFemale.hole & 1.000 & 0.0138 \\
+		s(measurement.no):sex\_lexSetMale.hole & 1.000 & 0.5894 \\    
+		s(measurement.no):preSegliquid & 1.953 & 0.2082 \\
+		s(measurement.no):preSegnasal\_apical & 1.001 & 0.8053 \\
+		s(measurement.no):preSegnasal\_labial & 1.000 & 0.5248 \\
+		s(measurement.no):preSegnone & 1.964 & 0.3398 \\
+		s(measurement.no):preSegobstruent\_liquid & 0.686 & 0.7812 \\
+		s(measurement.no):preSegoral\_apical & 1.000 & 0.2531 \\
+		s(measurement.no):preSegoral\_labial & 1.000 & 0.4681 \\ 
+		s(measurement.no):preSegpalatal & 1.000 & 0.9612 \\
+		s(measurement.no):preSegvelar & 1.000 & 0.2953 \\
+		\hline
+	\end{tabular}
+	\caption{table showing smooth terms of the model of F1 in CoRP-SE speakers}
+	\label{tbl:GGF1SE-smooth}
+\end{table}
+
+Figure \ref{fig:GGF1SE} shows that despite the interactions leading to a better fit model, the confidence interval for all four combinations of predictors is overlapping, leading to the conclusion that neither the height nor trajectory shape of F1 vary significantly between \textit{hope} and \textit{hole} in the CoRP-SE speakers. This is taken as the proto-typical pattern of the \GG{} split, so no difference would be expected in the CoRP-NE speakers even if they do show the southern version of the split.
+
+\begin{figure}[h]
+	\includesvg[width=\textwidth]{../figures/mono-SE-F1-gamm-plot.svg}
+	\caption{GAMM plot of F1 in CoRP-SE speakers} \label{fig:GGF1SE}
+\end{figure}
+
+\subsubsection{F2 of the CoRP-SE speakers}
+The best fit model for F2 of the \GG{} split in the CoRP-SE speakers is shown in tables \ref{tbl:GGF2SE-para} and \ref{tbl:GGF2SE-smooth}. The best fit model included an interaction term between age and sex of speaker but the variation between the levels of this interaction is not large and is only significant for one of the combinations (young male). The difference in height between \textit{hope} and \textit{hole} words is -568.45Hz and there is also a significant difference in shape between the \textit{hope} and \textit{hole} words. 
+
+\begin{table}[htbp]
+	\centering
+	\begin{tabular}{lrrrr}
+		\hline
+		& Estimate & Std.Error & t-value & Pr (>|t|) \\
+		\hline
+		(Intercept) & 1626.72 & 17.56 & 92.61 & <2e-16 \\
+		lexSet\_ordhole & -568.4517 & 25.2506 & -22.512 & <2e-16 \\
+		age\_sex.L & 58.41 & 28.31 & 2.06 & 0.039 \\
+		age\_sex.Q & -32.55 & 26.26 & -1.24 & 0.22 \\
+		age\_sex.C & -0.8431 & 24.0124 & -0.035 & 0.9720 \\		
+		\hline
+	\end{tabular}%
+	\caption{table showing parametric terms of the model of F2 in CoRP-SE speakers}
+	\label{tbl:GGF2SE-para}%
+\end{table}%
+
+\begin{table}[htbp]
+	\centering
+	\begin{tabular}{lrr}
+		\hline
+		& edf & p-value \\
+		\hline
+		s(measurement.no) & 1.00e+00 & 0.85 \\
+		s(measurement.no):lexSet\_ordhole & 4.66e+00 & <2e-16 \\
+		s(measurement.no):age\_sexYoung.Female & 1.00e+00 & 0.18 \\
+		s(measurement.no):age\_sexOld.Male & 1.000e+00 & 0.20 \\
+		s(measurement.no):age\_sexYoung.Male & 2.78e+00 & 0.04 \\
+		s(measurement.no):preSegliquid & 1.00e+00 & 0.69 \\
+		s(measurement.no):preSegnasal\_apical & 4.15e+00 & 6.67e-05 \\
+		s(measurement.no):preSegnasal\_labial & 1.00e+00 & 0.18 \\
+		s(measurement.no):preSegnone & 1.00e+00 & 0.35 \\
+		s(measurement.no):preSegobstruent\_liquid & 1.88e-04 & 1.00 \\
+		s(measurement.no):preSegoral\_apical & 1.43e+00 & 0.08 \\
+		s(measurement.no):preSegoral\_labial & 1.00e+00 & 0.48 \\
+		s(measurement.no):preSegpalatal & 1.00e+00 & 0.02 \\
+		s(measurement.no):preSegvelar & 3.97e+00 & 2.81e-05 \\
+		ti(measurement.no,dur) & 5.84e+00 & 0.00 \\
+		s(measurement.no,id) & 5.59e+00 & <2e-16 \\
+		s(measurement.no,word) & 1.79e+02 & <2e-16 \\
+		\hline
+	\end{tabular}
+	\caption{table showing smooth terms of the model of F2 in CoRP-SE speakers}
+	\label{tbl:GGF2SE-smooth}
+\end{table}
+
+The difference in shape and height between the \textit{hope} and \textit{hole} words can be seen in figure \ref{fig:GGF2SE}. Despite the age-sex interaction improving the model it is clear that the important effect is the distinction between the \hope{} and \hole{} words. In the CoRP-SE speakers there is a frontness difference of -568Hz (\hole{} is further back). The \hope{} and \hole{} words also have a significantly different shapes. The vowel in \hope{} words does not change much in F2 (as would be expected in a movement from a schwa position to a [\ipa{U}] but the vowel in the \hole{} words shows movement in F2, particularly decreases from the 10\% to 70\% points demonstrating the backing caused by the following /l/ segment. 
+
+If we take the CoRP-SE speakers as again having the prototypical split, the \GG{} split in F2 can be described as being found in difference in both frontness and shape of the vowel trajectory, with most of the set at around 1600Hz and the pre-/l/ context at around 1000Hz (parametric terms, table \ref{tbl:GGF2SE-para}).
+
+\begin{figure}[h]
+	\includesvg[width=\textwidth]{../figures/mono-SE-F2-gamm-plot.svg}
+	\caption{GAMM plot of F2 in CoRP-SE speakers} \label{fig:GGF2SE}
+\end{figure}
+
+
+\subsection{DECTE}
+The patterns exhibited by DECTE speakers show very little evidence of a \GG{} split. The only potential variation is in young vs old. The young (male) speakers show potential evidences of a higher and less front \hole{} vowel but the observed differences are not conclusive. Overall the DECTE vowel in nearer [o] and has similar frontness to the CoRP-SE pre-/l/ context.
+
+\subsubsection{F1 of the DECTE speakers}
+The best fit model for F1 of the DECTE speakers is shown in tables \ref{tbl:GGF1DE-para} and \ref{tbl:GGF1DE-smooth}. The model includes an interaction between age and lexical set, implying that old and young speakers show a different relationship between the \textit{hope} and \textit{hole} sets of words. The intercept (old - \textit{hope})is 585Hz and there's a significant difference between that and \textit{hope} from the young speakers (23Hz), which is unlikely to be linguistically meaningful. However, there's a larger effect from the young speakers' \textit{hole} words, which have an estimate of -102Hz, showing a higher midpoint to the vowel. In summary, with regard to midpoint, Old \& Young \hope{} and Old \hole{} are similar whereas Young \hole{} is higher in the acoustic vowel space.
+
+In smooth terms the two random smooths are significant, and there is some effect of preceding segment, but the only difference between speaker groups is the young speakers \textit{hope} words in comparison to the base line (Old \hope{}). 
+
+\begin{table}[htbp]
+	\centering
+	\begin{tabular}{lrrrr}
+		\hline
+		& Estimate & Std.Error & t-value & Pr (>|t|) \\
+		\hline
+		(Intercept) & 584.76 & 5.94 & 98.47 & <2e-16 \\
+		age\_lexSetYoung.hope & 23.47 & 9.60 & 2.44 & 0.01 \\
+		age\_lexSetOld.hole & -0.18 & 13.94 & -0.01 & 0.99  \\
+		age\_lexSetYoung.hole & -102.94 & 43.30 & -2.38 & 0.018 \\	
+		\hline
+	\end{tabular}%
+	\caption{table showing parametric terms of the model of F1 in DECTE speakers}
+	\label{tbl:GGF1DE-para}%
+\end{table}%
+
+\begin{table}[htbp]
+	\centering
+	\begin{tabular}{lrr}
+		\hline
+		& edf & p-value \\
+		\hline
+		s(measurement.no) & 4.021e+00 & 0.000175 \\
+		s(measurement.no):age\_lexSetYoung.hope & 1.00e+00 & 0.00 \\
+		s(measurement.no):age\_lexSetOld.hole & 1.001e+00 & 0.90 \\
+		s(measurement.no):age\_lexSetYoung.hole & 1.00e+00 & 0.90 \\
+		s(measurement.no):preSegliquid & 1.00e+00 & 0.09 \\
+		s(measurement.no):preSegnasal\_apical & 1.00e+00 & 0.01 \\
+		s(measurement.no):preSegnasal\_labial & 7.96e-05 & 1.00 \\
+		s(measurement.no):preSegnone & 1.00e+00 & 0.02 \\
+		s(measurement.no):preSegobstruent\_liqui & 1.84e+00 & 0.10 \\
+		s(measurement.no):preSegoral\_apical & 1.00e+00 & 0.04 \\
+		s(measurement.no):preSegoral\_labial & 1.00e+00 & 0.06 \\
+		s(measurement.no):preSegpalatal & 1.00e+00 & 0.06 \\
+		s(measurement.no):preSegvelar & 1.59e+00 & 0.66 \\
+		s(measurement.no,id) & 5.70e+00 & <2e-16 \\
+		s(measurement.no,word) & 1.01e+02 & <2e-16 \\
+		\hline
+	\end{tabular}
+	\caption{table showing smooth terms of the model of F1 in DECTE speakers}
+	\label{tbl:GGF1DE-smooth}
+\end{table}
+
+The parametric and smooth effects can be seen in figure \ref{fig:GGF1DE}; the plotted smooth for the young \textit{hole} words is overall lower than the other smooths, though the confidence intervals overlap through most of the trajectory. This may be evidence for an acoustically higher \hole{} vowel in younger speakers.The literature on the \goat{} vowel in pre-/l/ context does not attest an effect on F1 (vowel height), and it is unclear what we are seeing here. It can be determined from the confidence interval that there is a large variation in the height within the acoustic vowel space of younger speakers' productions of the \hole{} context.
+
+\begin{figure}[h]
+	\includesvg[width=\textwidth]{../figures/mono-DE-F1-gamm-plot.svg}
+	\caption{GAMM plot of F1 in DECTE speakers} \label{fig:GGF1DE}
+\end{figure}
+
+\subsubsection{F2 of the DECTE speakers}
+The best fit model for F2 of the DECTE speakers can be seen in tables \ref{tbl:GGF2DE-para} and \ref{tbl:GGF2DE-smooth}. The intercept is 1095Hz and the model includes a three way interaction between lexical set, age, and sex. The baseline group (Old Female, \textit{hope}), Old Male \textit{hole}, and Young Male \hole{}, are not significantly different to each other in frontness. There is a 118Hz difference between the baseline and Old Male \textit{hope}, a 381Hz difference between the baseline and Young Male \textit{hope}, and a -101Hz difference between the baseline and Old Female \textit{hole}. The conclusion that can be drawn from this is that at least in terms of midpoint intercept there is some variation. Specifically, Old Female speakers have a -101Hz difference between \textit{hope} (more front) and \textit{hole} (less front), Old Male speakers have a -117Hz difference between \textit{hope} and \textit{hole}, and Young Male speakers a -283Hz difference between \textit{hope} and \textit{hole} (not enough data is present in the DECTE group to look at young female speakers).
+There is little to no significant effect of trajectory shape in the smooth terms (table \ref{tbl:GGF1DE-smooth}); from the confidence intervals in figure \ref{fig:GGF1DE} there is overlap within the older speaker groups. However younger male speakers show some evidence of a split apart, with overlap t the beginning and end of the vowel but distinction the middle of the vowel. The is the same pattern as seen in the F1 of this speaker group and implies that a \GG{} split is beginning to emerge but there is still variation in the production of the \hole{} context.
+
+\begin{table}[htbp]
+	\centering
+	\begin{tabular}{lrrrr}
+		\hline
+		& Estimate & Std.Error & t-value & Pr (>|t|) \\
+		\hline
+		(Intercept) & 1094.81 & 23.89 & 45.82 & <2e-16 \\
+		age\_sex\_lexSetOld.Male.hope & 118.30 & 44.57 & 2.65 & 0.01 \\ 
+		age\_sex\_lexSetYoung.Male.hope & 381.00 & 45.14 & 8.44 & <2e-16 \\
+		age\_sex\_lexSetOld.Female.hole & -101.45 & 30.95 & -3.28 & 0.00 \\
+		age\_sex\_lexSetOld.Male.hole & 1.64 & 78.11 & 0.02 & 0.98 \\
+		age\_sex\_lexSetYoung.Male.hole & 97.46 & 105.54 & 0.92 & 0.36 \\
+		\hline
+	\end{tabular}%
+	\caption{table showing parametric terms of the model of F2 in DECTE speakers}
+	\label{tbl:GGF2DE-para}%
+\end{table}%
+
+
+
+\begin{table}[htbp]
+	\centering
+	\begin{tabular}{lrr}
+		\hline
+		& edf & p-value \\
+		\hline
+		s(measurement.no) & 5.032e+00 & <2e-16 \\
+		s(measurement.no):age\_sex\_lexSetOld.Male.hope & 1.00e+00 & 0.23 \\
+		s(measurement.no):age\_sex\_lexSetYoung.Male.hope & 3.437e+00 & 0.00 \\
+		s(measurement.no):age\_sex\_lexSetOld.Female.hole & 1.000e+00 & 0.98 \\
+		s(measurement.no):age\_sex\_lexSetOld.Male.hole & 1.000e+0 & 0.24 \\
+		s(measurement.no):age\_sex\_lexSetYoung.Male.hole & 1.000e+00 & 0.08 \\
+		s(measurement.no):preSegliquid & 1.000e+00 & 0.44 \\
+		s(measurement.no):preSegnasal\_apical & 3.164e+00 & 0.01 \\
+		s(measurement.no):preSegnasal\_labial & 1.000e+00 & 0.08 \\
+		s(measurement.no):preSegnone & 1.296e+00 & 0.89 \\
+		s(measurement.no):preSegobstruent\_liquid & 1.000e+00 & 0.43 \\
+		s(measurement.no):preSegoral\_apical & 1.556e+00 & 0.72 \\
+		s(measurement.no):preSegoral\_labial & 1.000e+00 & 0.05 \\
+		s(measurement.no):preSegpalatal & 1.216e-04 & 1.00 \\
+		s(measurement.no):preSegvelar & 1.000e+00 & 0.13 \\
+		ti(measurement.no,dur) & 7.496e+00 & <2e-16 \\
+		s(measurement.no,id) & 4.199e+00 & <2e-16 \\
+		s(measurement.no,word) & 1.105e+02 & <2e-16 \\
+		\hline
+	\end{tabular}
+	\caption{table showing smooth terms of the model of F2 in DECTE speakers}
+	\label{tbl:GGF2DE-smooth}
+\end{table}
+
+
+\begin{figure}[h]
+	\includesvg[width=\textwidth]{../figures/mono-DE-F2-gamm-plot.svg}
+	\caption{GAMM plot of F2 in DECTE speakers} \label{fig:GGF2DE}
+\end{figure}
+
+
+
+
+
+\subsection{CoRP-NE}
+CoRP-NE speakers show little to no distinction in F1 between \hope{} and \hole{}, in F2 they show a distinction between the two contexts. More details and models are discussed below.
+
+\subsubsection{F1 of the CoRP-NE speakers}
+CoRP-NE speakers show very little variation in F1 of \hope{} and \hole{} There is a small difference of 32Hz at the midpoint of the vowel, that is unlikely to be linguistically meaningful (see table \ref{tbl:GGF1NE-para}), and the only significant variation in the smooth terms is in the random smooths and the interaction between duration and shape. The shape of both trajectories can be seen in figure \ref{fig:GGF1NE}. The F1 midpoint (580Hz) is similar to both CoRP-SE (599Hz) and DECTE (584Hz), the trajectory moves in a similar direction to the CoRP-SE speakers, but not as much, which is more similar to DECTE speakers.
+
+\begin{table}[htbp]
+	\centering
+	\begin{tabular}{lrrrr}
+		\hline
+		& Estimate & Std.Error & t-value & Pr (>|t|) \\
+		\hline
+		(Intercept) & 580.01 & 4.36 & 132.95 & <2e-16 \\
+		lexSet\_ordhole & 31.79 & 6.99 & 4.55 & 5.44e-06 \\
+		\hline
+	\end{tabular}%
+	\caption{table showing parametric terms of the model of F1 in CoRP-NE speakers}
+	\label{tbl:GGF1NE-para}%
+\end{table}%
+
+
+\begin{table}[htbp]
+	\centering
+	\begin{tabular}{lrr}
+		\hline
+		& edf & p-value \\
+		\hline
+		s(measurement.no) & 6.46 & <2e-16 \\
+		s(measurement.no):lexSet\_ordhole & 2.27 & 0.15 \\
+		s(measurement.no):preSegliquid & 1.00 & 0.29 \\
+		s(measurement.no):preSegnasal\_apical & 1.00 & 0.29 \\  
+		s(measurement.no):preSegnasal\_labial & 1.858 & 0.48 \\
+		s(measurement.no):preSegnone & 2.184 & 0.18 \\
+		s(measurement.no):preSegobstruent\_liquid & 0.88 & 0.53 \\ 
+		s(measurement.no):preSegoral\_apical & 1.00 & 0.91 \\
+		s(measurement.no):preSegoral\_labial & 1.00 & 0.63 \\
+		s(measurement.no):preSegpalatal & 1.52 & 0.62 \\
+		s(measurement.no):preSegvelar & 1.001 & 0.80- \\
+		ti(measurement.no,dur) & 11.079 & <2e-16 \\
+		s(measurement.no,id) & 36.97 & <2e-16 \\
+		s(measurement.no,word) & 288.48 & <2e-16 \\
+		\hline
+	\end{tabular}
+	\caption{table showing smooth terms of the model of F1 in CoRP-NE speakers}
+	\label{tbl:GGF1NE-smooth}
+\end{table}
+
+\begin{figure}[h]
+	\includesvg[width=\textwidth]{../figures/mono-NE-F1-gamm-plot.svg}
+	\caption{GAMM plot of F1 in CoRP-NE speakers} \label{fig:GGF1NE}
+\end{figure}
+
+\subsubsection{F2 of the CoRP-NE speakers}
+The best fit model of F2 of the CoRP-NE speakers included speaker age group and sex, but in the parametric terms of the model neither of these have a significance or a meaningful effect size. The effect of the lexical set parametric term is a difference between \hope{} and \hole{} of -522Hz, similar to that of the CoRP-SE speakers. The smooth terms show some effects of preceding segments but due to small token counts in the categories these are difficult to interpret clearly. There is also an effect of lexical set but not of age group or speaker sex. As can be seen in figure \ref{fig:GGF2NE}, all four speaker groups in the model show a difference in acoustic frontness and some difference in shape (statistically significant, as seen in table \ref{tbl:GGF2NE-smooth} but not clearly visible in the graphs) between the \hope{} and \hole{} words. Section \ref{subsec:GGcomparison} below will directly compare the trajectories of all three groups.
+
+
+\begin{table}[htbp]
+	\centering
+	\begin{tabular}{lrrrr}
+		\hline
+		& Estimate & Std.Error & t-value & Pr (>|t|) \\
+		\hline
+		(Intercept) & 1542.39 & 44.99 & 34.28 & <2e-16 \\
+		lexSet\_ordhole & -521.97 & 22.57 & -23.13 & 2e-16 \\
+		ageGroupYoung & 6.18 & 48.34 & 0.13 & 0.90 \\
+		sexMale & 36.33 & 42.46 & 0.86 & 0.392 \\
+		\hline
+	\end{tabular}%
+	\caption{table showing parametric terms of the model of F2 in CoRP-NE speakers}
+	\label{tbl:GGF2NE-para}%
+\end{table}%
+
+
+\begin{table}[htbp]
+	\centering
+	\begin{tabular}{lrr}
+		\hline
+		& edf & p-value \\
+		\hline
+		s(measurement.no) & 1.00e+00 & 0.04 \\
+		s(measurement.no):lexSet\_ordhole & 4.07e+00 & 2.16e-06 \\
+		s(measurement.no):ageGroupOld & 2.46e-04 & 1.00 \\
+		s(measurement.no):ageGroupYoung & 1.00e+00 & 0.72 \\
+		s(measurement.no):sexFemale & 2.72e+00 & 0.11640 \\
+		s(measurement.no):sexMale & 1.00e+00 & 0.94 \\
+		s(measurement.no):preSegliquid & 1.00e+00 & 6.05e-06 \\
+		s(measurement.no):preSegnasal\_apical & 4.99e+00 & <2e-16 \\
+		s(measurement.no):preSegnasal\_labial & 2.48e+00 & 8.67e-06 \\
+		s(measurement.no):preSegnone & 1.00e+00 & 0.00 \\
+		s(measurement.no):preSegobstruent\_liquid & 1.00e+00 & 2.81e-06 \\
+		s(measurement.no):preSegoral\_apical & 2.29e+00 & 0.014 \\
+		s(measurement.no):preSegoral\_labial & 1.78e+00 & 1.47e-06 \\
+		s(measurement.no):preSegpalatal & 9.47e-04 & 1.00 \\
+		s(measurement.no):preSegvelar & 4.39e+00 & <2e-16 \\
+		ti(measurement.no,dur) & 1.15e+01 & <2e-16 \\
+		s(measurement.no,id) & 3.629e+01 & <2e-16 \\
+		s(measurement.no,word) & 2.81e+02 & <2e-16 \\
+		\hline
+	\end{tabular}
+	\caption{table showing smooth terms of the model of F2 in CoRP-NE speakers}
+	\label{tbl:GGF2NE-smooth}
+\end{table}
+
+\begin{figure}[h]
+	\includesvg[width=\textwidth]{../figures/mono-NE-F2-gamm-plot.svg}
+	\caption{GAMM plot of F2 in CoRP-NE speakers} \label{fig:GGF2NE}
+\end{figure}
+
+\subsection{Direct Comparison of the \scs{Goat-Goal} split in all three speaker groups} \label{subsec:GGcomparison}
+\subsubsection{\scs{Goat-Goal} F1 comparison} \label{subsubsec:GGF1all}
+Figure \ref{fig:GGF1} compares all three speaker groups in F1. It is clear that while the F1 trajectories are broadly in a similar position, and have similar midpoint measurements, the shape and directions are very different. 
+
+The DECTE speakers are also the only ones that show any distinction between the \hope{} and \hole{} words, with younger speakers showing a lower F1 in \hole{} words.
+
+\begin{landscape}
+	\vspace*{\fill}
+	\begin{center}
+	\begin{figure}[H]
+		\includesvg[width=0.84\textheight]{../figures/mono-F1-gamm-plot.svg}
+		\caption{GAMM plot of F1 in all three speaker groups} \label{fig:GGF1}
+	\end{figure}
+	\end{center}
+	\vspace*{\fill}
+\end{landscape}
+
+
+
+
+
+
+
+\subsubsection{\scs{Goat-Goal} F2 comparison} \label{subsubsec:GGF2all}
+Figure \ref{fig:GGF2} compares all three speaker groups in F2 by plotting all three models discussed in the sections above together. It can be clearly seen that CoRP-SE and CoRP-NE speakers have a \GG{} split in F2 whereas the old DECTE speakers do not and the young (male) DECTE speakers have indication of a split emerging but it is not across the whole vowel trajectory as found in the CoRP groups. The midpoint differences (as seen in the parametric terms) are similar (CoRP-SE: 568Hz, CoRP-NE: 522Hz) but there is more difference in the trajectory shape in the CoRP-SE speakers, who show a flatter F2 trajectory. It is possible to say that CoRP-NE speakers are behaving broadly non-regionally with respect to the \GG{} split.
+
+
+\begin{landscape}
+	\vspace*{\fill}
+	\begin{center}
+		\begin{figure}[h]
+			\includesvg[height=0.7\textwidth]{../figures/mono-F2-gamm-plot.svg}
+			\caption{GAMM plot of F2 in all three speaker groups} \label{fig:GGF2}
+		\end{figure}
+	\end{center}
+	\vspace*{\fill}
+\end{landscape}
+
+
+
+\section{Morpho-phonological Conditioning of the \goal{} context (\textit{hole, holy, holey})} \label{sec:GOATmorph}
+This section will consider the \goal{} context (that is \goat{} vowels before an \l\ segment) in 3 different morpho-phonological conditions. Monosyllabic, monomorphemic (\hole{}), disyllabic, bimorphemic (\holey{}), and disyllabic, monomorphemic (\holy{}). The analysis aims both understand the morphological variation in general but also to apply the theory of the lifecycle of phonological processes (chapter \notinsubfile{\ref{ch:LitReview}}\onlyinsubfile{3}) compare the relationship and potential direction of change between the CoRP-SE and CoRP-NE communities.
+
+\subsection{Morpho-phonological Conditioning in CoRP-SE}
+The CoRP-SE speakers show no distinction between the pre-/l/ contexts in F1, and show a distinction between all three contexts in F2.
+\subsubsection{CoRP-SE F1}
+In F1 of the CoRP-SE speakers, the best fit model included a three way interaction between age group, speaker set and morpho-phonological context. However, very few of these differences were large or significant, as can be seen in figure \ref{fig:goalF1SE}. F1 is variable between these contexts, as would be expected because the potential variation for \hole{},\holey{}, and \holy{} is within the \GG{} difference.
+\begin{table}[htbp]
+	\centering
+	\begin{tabular}{lrrrr}
+		\hline
+		& Estimate & Std.Error & t-value & Pr (>|t|) \\
+		\hline   
+		(Intercept) & 599.66 & 13.85 & 43.290 & 2e-16 \\
+		age\_sex\_lexSetYoung.Female.hole & 30.10 & 18.87 & 1.6 & 0.11 \\
+		age\_sex\_lexSetOld.Male.hole & -0.60 & 18.93 & -0.03 & 0.97 \\
+		age\_sex\_lexSetYoung.Male.hole & -37.09 & 23.11 & -1.61 & 0.11 \\
+		age\_sex\_lexSetOld.Female.holey & -30.41 & 7.62 & -3.99 & 6.76e-05 \\
+		age\_sex\_lexSetYoung.Female.holey & -27.41 & 20.17 & -1.36 & 0.17 \\
+		age\_sex\_lexSetOld.Male.holey & -49.76 & 20.27 & -2.46 & 0.01 \\
+		age\_sex\_lexSetYoung.Male.holey & -58.16 & 24.32 & -2.39 & 0.017 \\
+		age\_sex\_lexSetOld.Female.holy & -26.50 & 9.03 & -2.93 & 0.00 \\
+		age\_sex\_lexSetYoung.Female.holy & -2.82 & 20.88 & -0.16 & 0.89 \\
+		age\_sex\_lexSetOld.Male.holy & -59.95 & 20.84 & -2.88 & 0.00 \\
+		age\_sex\_lexSetYoung.Male.holy & -56.06 & 26.24 & -2.14 & 0.03 \\
+		\hline
+	\end{tabular}%
+	\caption{table showing parametric terms the model of F1 in the pre-/l/ contexts in CoRP-SE speakers}
+	\label{tbl:goalF1SE-para}%
+\end{table}%
+
+\begin{table}[htbp]
+	\centering
+	\begin{tabular}{lrr}
+		\hline
+		& edf & p-value \\
+		\hline
+		s(measurement.no) & 6.16 & <2e-16 \\
+		s(measurement.no):age\_sex\_lexSetYoung.Female.hole & 1.0 & 0.97 \\
+		s(measurement.no):age\_sex\_lexSetOld.Male.hole & 2.08 &  0.26 \\
+		s(measurement.no):age\_sex\_lexSetYoung.Male.hole & 1.76 & 0.35 \\
+		s(measurement.no):age\_sex\_lexSetOld.Female.holey & 1.53 & 0.00 \\
+		s(measurement.no):age\_sex\_lexSetYoung.Female.holey & 1.00 & 0.08 \\
+		s(measurement.no):age\_sex\_lexSetOld.Male.holey & 2.22 & 0.25 \\
+		s(measurement.no):age\_sex\_lexSetYoung.Male.holey & 1.16 & 0.26 \\
+		s(measurement.no):age\_sex\_lexSetOld.Female.holy & 1.00 & 0.01 \\
+		s(measurement.no):age\_sex\_lexSetYoung.Female.holy & 2.72 &0.06 \\ 
+		s(measurement.no):age\_sex\_lexSetOld.Male.holy & 1.00 & 0.56 \\
+		s(measurement.no):age\_sex\_lexSetYoung.Male.holy & 1.00 & 0.37 \\
+		s(measurement.no):preSegliquid & 1.00 & 0.60 \\
+		s(measurement.no):preSegnasal\_labial & 1.00 & 0.33 \\
+		s(measurement.no):preSegnone & 1.51 & 0.30 \\
+		s(measurement.no):preSegobstruent\_liquid & 1.00 & 0.35 \\
+		s(measurement.no):preSegoral\_apical & 1.78 & 0.47 \\
+		s(measurement.no):preSegoral\_labial & 1.00 & 0.48 \\
+		s(measurement.no):preSegpalatal & 0.51 & 0.97 \\
+		s(measurement.no):preSegvelar & 1.26 & 0.70 \\
+		ti(measurement.no,dur) & 11.14 & <2e-16 \\
+		s(measurement.no,id) & 5.87 & <2e-16 \\
+		s(measurement.no,word) & 62.90 & <2e-16 \\
+		\hline
+	\end{tabular}
+	\caption{table showing smooth terms the model of F1 in the pre-/l/ contexts in CoRP-SE speakers}
+	\label{tbl:goalF1SE-smooth}%
+\end{table}
+
+\begin{center}
+	\begin{figure}[h]
+		\includesvg[width=\textwidth]{../figures/goal-SE-F1-gamm-plot.svg}
+		\caption{GAMM plot of F1 of the \goal{} context in CoRP-SE speakers} \label{fig:goalF1SE}
+	\end{figure}
+\end{center}
+
+
+\subsubsection{CoRP-SE F2} \label{subsubsec:morphSEF2}
+The best fit model of F2 for the CoRP-NE speakers shows that there is a difference between the midpoints of the \hole{}, \holey{}, and \holy{} contexts (see table \ref{tbl:goalF2SE-para} but very little difference in the shape of the smooths). The \holy{} midpoint (1520Hz) is similiar to that of \hope{} in \ref{tbl:GGF2DE-para} (=1627Hz), implying the un-backed diphthong.
+
+As discussed in chapter \notinsubfile{\ref{ch:LitReview})}\onlyinsubfile{3} there is discussion over whether an interim target is possible or if speakers only have a front or backed diphthong. In order to consider this a check of the raw (not modelled) data was undertaken, which can be seen in figure \ref{fig:goalF2SE-boxplot} (with \hope{} also included for comparison). This shows that potentially the in-between diphthong shown in the \holey{} context in the model is actually caused by tokens existing in the two positions but the model not capturing what is causing this variation. 
+
+\begin{table}[htbp]
+	\centering
+	\begin{tabular}{lrrrr}
+		\hline
+		& Estimate & Std.Error & t-value & Pr (>|t|) \\
+		\hline   
+		(Intercept) & 1045.37 & 29.40 & 35.56 & <2e-16 \\
+		lexSet\_ordholey & 234.50 & 34.82 & 6.74 & 1.89e-11 \\
+		lexSet\_ordholy & 474.28 & 42.25 & 11.23 & <2e-16 \\
+		ageGroupYoung & -24.52 & 27.06 & -0.91 & 0.37 \\
+		sexMale & 40.27 & 27.10 & 1.49 & 0.137 \\
+		\hline
+	\end{tabular}%
+	\caption{table showing parametric terms the model of F2 in the pre-/l/ contexts in CoRP-SE speakers}
+	\label{tbl:goalF2SE-para}%
+\end{table}%
+
+\begin{table}[htbp]
+	\centering
+	\begin{tabular}{lrr}
+		\hline
+		& edf & p-value \\
+		\hline
+		s(measurement.no) & 5.06e+00 & 8.33e-06 \\
+		s(measurement.no):lexSet\_ordholey & 1.00e+00 &  0.20 \\
+		s(measurement.no):lexSet\_ordholy & 1.95 & 0.16 \\
+		s(measurement.no):ageGroupOld & 1.01e-04 & 1.00 \\
+		s(measurement.no):ageGroupYoung & 2.95e+00 & 0.07 \\
+		s(measurement.no):sexFemale & 1.10e-04 & 1.00 \\
+		s(measurement.no):sexMale & 1.85e+00 & 0.46 \\
+		s(measurement.no):preSegliquid & 1.00e+00 & 0.76 \\
+		s(measurement.no):preSegnasal\_labial & 1.47e+00 & 0.65 \\
+		s(measurement.no):preSegnone & 1.73e+00 & 0.57 \\
+		s(measurement.no):preSegobstruent\_liquid & 1.97e-04 & 1.00 \\
+		s(measurement.no):preSegoral\_apical & 1.00e+00 & 0.83 \\    
+		s(measurement.no):preSegoral\_labial & 1.68 & 0.52 \\
+		s(measurement.no):preSegpalatal & 1.00e+00 & 0.63 \\
+		s(measurement.no):preSegvelar & 1.00e+00 & 0.81 \\
+		ti(measurement.no,dur) & 8.28 & <2e-16 \\
+		s(measurement.no,id) & 9.33e+00 & <2e-16 \\
+		s(measurement.no,word) & 7.70e+01 & <2e-16 \\
+		\hline
+	\end{tabular}
+	\caption{table showing smooth terms the model of F2 in the pre-/l/ contexts in CoRP-SE speakers}
+	\label{tbl:goalF2SE-smooth}%
+\end{table}
+
+\begin{center}
+	\begin{figure}[h]
+		\includesvg[width=\textwidth]{../figures/goal-SE-F2-gamm-plot.svg}
+		\caption{GAMM plot of F2 of the \goal{} context in CoRP-SE speakers} \label{fig:goalF2SE}
+	\end{figure}
+\end{center}
+
+\begin{center}
+	\begin{figure}[h]
+		\includesvg[width=\textwidth]{../figures/goal-SE-F2-boxplot.svg}
+		\caption{Boxplot of the F2 midpoints (measurement.no = 50) of the \goal{} context in CoRP-SE speakers (raw data)} \label{fig:goalF2SE-boxplot}
+	\end{figure}
+\end{center}
+
+
+
+
+\subsection{Morpho-phonological Conditioning in DECTE}
+The pre-/l/ contexts for the DECTE speakers is a small data set, but the data available shows no distinction in either F1 or F2, models are discussed below.
+
+\subsubsection{DECTE F1}
+Tables \ref{tbl:goalF1DE-para} and \ref{tbl:goalF1DE-smooth} show the best fit model for F1 in the DECTE speakers (NB no bimorphemic words occurred in the DECTE interviews so that category is missing from the model). The best fit model included age group and speaker sex but neither had a meaningful effect size or significance so are left out of the plotting of the model. The parametric terms show a marginal difference between the midpoint of \hope{} and \hole{} words (58Hz) but no significant smooth term variation. The intercept (Old Female, \textit{hole}) is at 554Hz, approximately 40Hz lower (higher in the vowel space) than the CoRP-SE speakers. It is unlikely that this is a meaningful difference.
+From looking at the trajectory shape, it can be seen that there is little to no F1 movement in either the \hole{} or \holy{} words implying that the vowels do not change height, which is similar to the \hope{} trajectory (section \ref{subsec:hopeF1}) but different to the CoRP-SE trajectory which shows evidence of upward moving in the vowel space. The lack of F1 movement in the DECTE vowel contributes evidence towards the conclusion that the speakers are producing a predominantly monophthongal realisation (not a centering diphthong).
+
+\begin{table}[htbp]
+	\centering
+	\begin{tabular}{lrrrr}
+		\hline
+		& Estimate & Std.Error & t-value & Pr (>|t|) \\
+		\hline   
+		(Intercept) & 553.96 & 30.10 & 18.41 & <2e-16 \\
+		lexSet\_ordholy & 57.92 & 26.04 & 2.23 & 0.03 \\
+		ageGroupYoung & 13.13 & 37.74 & 0.35 & 0.73 \\
+		sexMale & -19.04 & 37.75 & -0.50 & 0.61 \\
+		\hline
+	\end{tabular}%
+	\caption{table showing parametric terms the model of F1 in the pre-/l/ contexts in DECTE speakers}
+	\label{tbl:goalF1DE-para}%
+\end{table}%
+
+\begin{table}[htbp]
+	\centering
+	\begin{tabular}{lrr}
+		\hline
+		& edf & p-value \\
+		\hline
+		s(measurement.no) & 1.00e+00 & 0.61 \\
+		s(measurement.no):lexSet\_ordholy & 1.00e+00 & 0.53 \\
+		s(measurement.no):ageGroupOld & 1.00e+00 & 0.61 \\
+		s(measurement.no):ageGroupYoung & 1.15e+00 & 0.24 \\
+		s(measurement.no):sexFemale & 1.39e-05 & 1.00 \\
+		s(measurement.no):sexMale & 1.77e+00 & 0.47 \\
+		s(measurement.no):preSegnone & 1.00e+00 & 0.71 \\
+		s(measurement.no):preSegobstruent\_liquid & 1.00e+00 & 0.62 \\
+		s(measurement.no):preSegoral\_apical & 1.00e+00 & 0.60 \\
+		s(measurement.no):preSegoral\_labial & 1.32e-05 & 0.50 \\
+		s(measurement.no):preSegpalatal & 2.09e+00 & 0.32 \\
+		s(measurement.no):preSegvelar & 1.39e+00 & 0.57 \\
+		ti(measurement.no,dur) & 3.02e+00 & 0.00 \\
+		s(measurement.no,id) & 1.05e+01 & <2e-16 \\
+		s(measurement.no,word) & 1.45e+01 & <2e-16 \\
+		\hline
+	\end{tabular}
+	\caption{table showing smooth terms the model of F1 in the pre-/l/ contexts in DECTE speakers}
+	\label{tbl:goalF1DE-smooth}%
+\end{table}
+
+\begin{center}
+	\begin{figure}[h]
+		\includesvg[width=\textwidth]{../figures/goal-DE-F1-gamm-plot.svg}
+		\caption{GAMM plot of F1 of the \goal{} context in DECTE speakers} \label{fig:goalF1DE}
+	\end{figure}
+\end{center}
+
+\subsubsection{DECTE F2}
+The best fit model for the pre-/l/ contexts in the DECTE speakers is shown in tables \ref{tbl:goalF2DE-para} and \ref{tbl:goalF2DE-smooth}. In the parametric terms there is a significant effect of age group, and speaker sex, but not lexical set. The calculated mean midpoints are:
+\begin{itemize}
+	\item Old Female: 985.93
+	\item Young Female:	1161.24
+	\item Old Male: 1152.73
+	\item Young Male: 1328.04
+\end{itemize}
+
+The female speakers show an overall less front vowel, potentially showing more backing effect than the male speakers. The male speakers show more movement in the diphthong (see fiture \ref{fig:goalF2DE}). However, overall, none of the DECTE speakers show any syllable structure conditioning of the \goat{} vowel in pre-/l/ position.
+
+\begin{table}[htbp]
+	\centering
+	\begin{tabular}{lrrrr}
+		\hline
+		& Estimate & Std.Error & t-value & Pr (>|t|) \\
+		\hline   
+		(Intercept) & 985.93 & 37.48 & 26.31 & <2e-16 \\
+		lexSet\_ordholy & -15.86 & 75.44 & -0.21 & 0.83 \\
+		ageGroupYoung & 175.31 & 36.75 & 4.77 & 2.30e-06 \\
+		sexMale & 166.08 & 37.48 & 4.43 & 1.11e-05 \\
+		\hline
+	\end{tabular}%
+	\caption{table showing parametric terms the model of F2 in the pre-/l/ contexts in DECTE speakers}
+	\label{tbl:goalF2DE-para}%
+\end{table}%
+
+\begin{table}[htbp]
+	\centering
+	\begin{tabular}{lrr}
+		\hline
+		& edf & p-value \\
+		\hline
+		s(measurement.no) & 4.31e+00 & 4.6e-05 \\
+		s(measurement.no):lexSet\_ordholy & 1.00e+00 & 0.37 \\
+		s(measurement.no):ageGroupOld & 1.0e+00 & 0.68 \\
+		s(measurement.no):ageGroupYoung & 2.28e-05 & 0.50 \\
+		s(measurement.no):sexFemale & 2.67e-05 & 1.00 \\
+		s(measurement.no):sexMale & 1.00e+00 & 0.00 \\
+		s(measurement.no):preSegnone & 1.00e+00 & 0.478 \\
+		s(measurement.no):preSegobstruent\_liquid & 1.00e+00 & 0.91 \\
+		s(measurement.no):preSegoral\_apical & 1.00e+00 & 0.34 \\
+		s(measurement.no):preSegoral\_labial & 7.45e-04 & 1.00 \\
+		s(measurement.no):preSegpalatal & 1.00e+00 & 0.24 \\
+		s(measurement.no):preSegvelar & 1.00e+00 & 0.95 \\
+		ti(measurement.no,dur) & 3.68e+00 & 0.19 \\
+		s(measurement.no,id) & 8.15+00 & <2e-16 \\
+		s(measurement.no,word) & 1.65e+01 & <2e-16 \\
+		\hline
+	\end{tabular}
+	\caption{table showing smooth terms the model of F2 in the pre-/l/ contexts in DECTE speakers}
+	\label{tbl:goalF2DE-smooth}%
+\end{table}
+
+\begin{center}
+	\begin{figure}[h]
+		\includesvg[width=0.84\textheight]{../figures/goal-DE-F2-gamm-plot.svg}
+		\caption{GAMM plot of F2 of the \goal{} context in DECTE speakers} \label{fig:goalF2DE}
+	\end{figure}
+\end{center}
+
+
+\subsection{Morpho-phonological Conditioning in CoRP-NE}
+\subsubsection{CoRP-NE F1}
+Tables \ref{tbl:goalF1NE-para} and \ref{tbl:goalF1NE-smooth} show the best fit model of F1 of the CoRP-NE speakers. The interaction improved the model fit but there aren't large differences between the speaker groups. In general, the \hole{} words have a higher F1 (lower in the vowel space), the \holy{} words a lower F1 (higher in the vowel space), and the female speakers have a lower F1. However the confidence intervals for these differences for these differences overlap for most of the trajectory so the broad conclusion that can be drawn is that, similar to the CoRP-SE speakers, the CoRP-NE speakers show evidence of a raising diphthong in pre-/l/ position and no difference in F1 between the \hole{}, \holey{}, and \holy{} contexts. 
+
+\begin{table}[htbp]
+	\centering
+	\begin{tabular}{lrrrr}
+		\hline
+		& Estimate & Std.Error & t-value & Pr (>|t|) \\
+		\hline   
+		(Intercept) & 591.10 & 11.31 & 52.26 & <2e-16 \\
+		age\_sex\_lexSetYoung.Female.hole & 13.83 & 12.60 & 1.10 & 0.27 \\
+		age\_sex\_lexSetOld.Male.hole & 83.24 & 19.12 & 4.35 & 1.36e-05 \\
+		age\_sex\_lexSetYoung.Male.hole & 38.37 & 13.06 & 2.94 & 0.00 \\
+		age\_sex\_lexSetOld.Female.holey & -33.76 & 8.02 & -4.21 & 2.62e-05 \\
+		age\_sex\_lexSetYoung.Female.holey & -4.47 & 14.53 & -0.31 & 0.76 \\
+		age\_sex\_lexSetYoung.Male.holey & -8.05 & 14.90 & -0.54 & 0.60 \\
+		age\_sex\_lexSetOld.Female.holy & -39.25 & 9.23 & -4.25 & 2.13e-05 \\
+		age\_sex\_lexSetYoung.Female.holy & -9.44 & 15.22 & -0.62 & 0.54 \\
+		age\_sex\_lexSetYoung.Male.holy & -0.66 & 15.62 & -0.04 & 0.97 \\
+		\hline
+	\end{tabular}%
+	\caption{table showing parametric terms the model of F1 in the pre-/l/ contexts in CoRP-NE speakers}
+	\label{tbl:goalF1NE-para}%
+\end{table}%
+
+\begin{table}[htbp]
+	\centering
+	\begin{tabular}{lrr}
+		\hline
+		& edf & p-value \\
+		\hline
+		s(measurement.no) & 5.95 & <2e-16 \\
+		s(measurement.no):age\_sex\_lexSetYoung.Female.hole & 1.20 & 0.90 \\
+		s(measurement.no):age\_sex\_lexSetOld.Male.hole & 1.28 & 0.87 \\
+		s(measurement.no):age\_sex\_lexSetYoung.Male.hole & 1.00 & 0.21 \\
+		s(measurement.no):age\_sex\_lexSetOld.Female.holey & 1.00 & 0.55 \\
+		s(measurement.no):age\_sex\_lexSetYoung.Female.holey & 2.44 & 0.21 \\
+		s(measurement.no):age\_sex\_lexSetYoung.Male.holey & 3.11 & 0.01 \\
+		s(measurement.no):age\_sex\_lexSetOld.Female.holy & 1.36 & 0.64 \\
+		s(measurement.no):age\_sex\_lexSetYoung.Female.holy & 1.00 & 0.61 \\
+		s(measurement.no):age\_sex\_lexSetYoung.Male.holy & 2.64 & 0.02 \\
+		s(measurement.no):preSegliquid & 1.00 & 0.96 \\
+		s(measurement.no):preSegnasal\_labial & 0.66 & 0.98 \\
+		s(measurement.no):preSegnone & 2.89 & 0.04 \\
+		s(measurement.no):preSegoral\_apical & 2.97 & 0.08 \\
+		s(measurement.no):preSegoral\_labial & 1.00 & 0.46 \\
+		s(measurement.no):preSegpalatal & 1.42 & 0.71 \\
+		s(measurement.no):preSegvelar & 1.00 & 0.99 \\
+		ti(measurement.no,dur) & 12.16 & <2e-16 \\
+		s(measurement.no,id) & 28.81 & <2e-16 \\
+		s(measurement.no,word) & 103.30 & <2e-16 \\
+		\hline
+	\end{tabular}
+	\caption{table showing smooth terms the model of F1 in the pre-/l/ contexts in CoRP-NE speakers}
+	\label{tbl:goalF1NE-smooth}%
+\end{table}
+
+\begin{center}
+	\begin{figure}[h]
+		\includesvg[width=0.84\textheight]{../figures/goal-NE-F1-gamm-plot.svg}
+		\caption{GAMM plot of F1 of the \goal{} context in CoRP-NE speakers} \label{fig:goalF1NE}
+	\end{figure}
+\end{center}
+
+
+\subsubsection{CoRP-NE F2}
+The best fit model for F2 of the pre-/l/ contexts in CoRP-NE speakers is shown in tables \ref{tbl:goalF2NE-para} and \ref{tbl:goalF2NE-smooth}. An interaction between lexical set, age group, and speaker sex improved the model fit, the mean F2 value (calculated from the interaction values) for each of the lexical sets is:
+\begin{itemize}
+	\item \hole{}: 1044Hz
+	\item \holey{}: 1170Hz
+	\item \holy{}: 1217Hz
+\end{itemize}
+However, as can be seen in figure \ref{fig:goalF2NE}, the confidence intervals for these intervals overlap for the majority of groups (the gap seen in young female speakers is the only distinction, = 200Hz). 
+The \holy{} set is not as front as the \hope{} words in table \ref{tbl:GGF2NE-para}, and the overall position and combining that information with the overlap in confidence intervals implies that all the pre-/l/ context words have the backed diphthong.
+
+\begin{table}[htbp]
+	\centering
+	\begin{tabular}{lrrrr}
+		\hline
+		& Estimate & Std.Error & t-value & Pr (>|t|) \\
+		\hline   
+		(Intercept) & 1116.10 & 56.88 & 19.62 & <2e-16 \\
+		age\_sex\_lexSetYoung.Female.hole & -99.22 & 62.39 & -1.59 & 0.11 \\
+		age\_sex\_lexSetOld.Male.hole & -116.63 & 92.99 & -1.25 & 0.210 \\
+		age\_sex\_lexSetYoung.Male.hole & -72.33 & 64.63 & -1.12 & 0.26 \\
+		age\_sexlexSetOld.Female.holey & 126.72 & 41.54 & 3.05 & 0.00 \\
+		age\_sex\_lexSetYoung.Female.holey & 90.04 & 74.06 & 1.22 & 0.22 \\
+		age\_sex\_lexSetYoung.Male.holey & -55.26 & 75.87 & -0.73 & 0.47 \\
+		age\_sex\_lexSetOld.Female.holy & 148.38 & 49.01 & 3.03 & 0.00 \\
+		age\_sex\_lexSetYoung.Female.holy & 118.36 & 78.47 & 1.51 & 0.13 \\
+		age\_sex\_lexSetYoung.Male.holy & 36.06 & 80.27 & 0.45 & 0.65 \\
+		\hline
+	\end{tabular}%
+	\caption{table showing parametric terms the model of F2 in the pre-/l/ contexts in CoRP-NE speakers}
+	\label{tbl:goalF2NE-para}%
+\end{table}%
+
+\begin{table}[htbp]
+	\centering
+	\begin{tabular}{lrr}
+		\hline
+		& edf & p-value \\
+		\hline
+		s(measurement.no) & 5.91e+00 & <2e-16 \\
+		s(measurement.no):age\_sex\_lexSetYoung.Female.hole & 1.00 & 0.69 \\
+		s(measurement.no):age\_sex\_lexSetOld.Male.hole & 1.00e+00 & 0.86 \\
+		s(measurement.no):age\_sex\_lexSetYoung.Male.hole & 1.00 & 0.96 \\
+		s(measurement.no):age\_sex\_lexSetOld.Female.holey & 1.00 & 0.59 \\
+		s(measurement.no):age\_sex\_lexSetYoung.Female.holey & 1.00 & 0.93 \\
+		s(measurement.no):age\_sex\_lexSetYoung.Male.holey & 1.23e+00 & 0.83 \\
+		s(measurement.no):age\_sex\_lexSetOld.Female.holy & 1.00e+00 & 0.64 \\
+		s(measurement.no):age\_sex\_lexSetYoung.Female.holy & 1.00e+00 & 0.91 \\
+		s(measurement.no):age\_sex\_lexSetYoung.Male.holy & 1.00e+00 & 0.92 \\
+		s(measurement.no):preSegliquid & 2.53e+00 & 0.03 \\
+		s(measurement.no):preSegnasal\_labial & 2.52e-04 & 1.00 \\
+		s(measurement.no):preSegnone & 1.99e+00 & 0.24 \\
+		s(measurement.no):preSegoral\_apical & 2.69e+00 & 0.01 \\
+		s(measurement.no):preSegoral\_labial & 1.63e+00 & 0.34 \\
+		s(measurement.no):preSegpalatal & 1.01e+00 & 0.00 \\
+		s(measurement.no):preSegvelar & 1.00e+00 & 0.03 \\
+		ti(measurement.no,dur) & 5.88e+00 & <2e-16 \\
+		s(measurement.no,id) & 2.15e+01 & <2e-16 \\
+		s(measurement.no,word) & 8.67e+01 & <2e-16 \\
+		\hline
+	\end{tabular}
+	\caption{table showing smooth terms the model of F2 in the pre-/l/ contexts in CoRP-NE speakers}
+	\label{tbl:goalF2NE-smooth}%
+\end{table}
+
+\begin{center}
+	\begin{figure}[h]
+		\includesvg[width=0.84\textheight]{../figures/goal-NE-F2-gamm-plot.svg}
+		\caption{GAMM plot of F2 of the \goal{} context in CoRP-NE speakers} \label{fig:goalF2NE}
+	\end{figure}
+\end{center}
+
+\subsection{Direct Comparison of the pre-/l/ contexts in all three speaker groups} \label{subsec:GOALcomparison}
+\subsubsection{pre-/l/ F1 comparison}
+Figure \ref{fig:goalF1} shows the F1 trajectories for the pre/l/ context in all three speaker groups. The DECTE speakers have the least movement in the trajectory, implying a monophthongal variant. CoRP-SE has the most movement through the trajectory, but CoRP-NE has a similar trajectory shape. None of the groups show distinction between the different morpho-phonological environments.
+
+\begin{landscape}
+	\vspace*{\fill}
+	\begin{center}
+		\begin{figure}[H]
+			\includesvg[width=0.84\textheight]{../figures/goal-F1-gamm-plot.svg}
+			\caption{GAMM plot of F1 of pre-/l/ position in all three speaker groups} \label{fig:goalF1}
+		\end{figure}
+	\end{center}
+	\vspace*{\fill}
+\end{landscape}
+
+\subsubsection{pre-/l/ F2 comparison}
+Figure \ref{fig:goalF2} shows the F2 trajectories for the pre/l/ context in all three speaker groups. There is a high level of variation and large confidence intervals in the DECTE speakers, but they clearly do not show a distinction between the contexts. The CoRP-SE speakers show distinction between all three contexts. With the \holey{} words showing as between the \hole{} and \holy{} words. As discussed above (section \ref{subsubsec:morphSEF2}) this may be showing an in-between diphthong or a situation where some words are front and some back, but none of the predictors capture the distinction. CoRP-NE speakers do not show a distinction between the contexts the implications of this combined with the F1 variation will be discussed in the conclusion (section \ref{sec:GGconclusion})
+
+\begin{landscape}
+	\vspace*{\fill}
+	\begin{center}
+		\begin{figure}[H]
+			\includesvg[width=0.84\textheight]{../figures/goal-F2-gamm-plot.svg}
+			\caption{GAMM plot of F2 of pre-/l/ position in all three speaker groups} \label{fig:goalF2}
+		\end{figure}
+	\end{center}
+	\vspace*{\fill}
+\end{landscape}
+
+
+
+
+
+\section{Conclusion} \label{sec:GGconclusion}
+WIith respect to the \goat{} vowel in \hope{} context, and the \GG{} split. The CoRP-NE speakers behave in a non regional manner. In the \hope{} words they show a vowel that is highly similar to the CoRP-SE vowel, a diphthong that shows change in F1 and F2. In the split we see a difference in F2 but not in F1, again, similar or identical to the CoRP-SE speakers.
+
+The situation in the pre/l/ context is far less clear. The CoRP-SE speakers 
+show a trajectory in the \holey{} words that is between the \holy{} (+\hope{}) words and the \hole{} words. However, looking at the raw data shows that potentially this is caused by a mixture of words in the two positions rather than a third trajectory position. Unfortunately, whatever predictor is conditioning the variation between the two places is not captured in the model. It may be a combination of word and individual speaker (both modelled as random intercepts) interacting with how speakers process the morphology. for example, solar and polar could be processed as bimorphemic or monomorphemic.
+
+\begin{table}[h]
+	\centering
+	\begin{tabular}{lllll}
+		\toprule
+		& \textbf{\textit{hole}} & \textbf{\textit{hole-y}} & \textbf{\textit{holy}} & \textbf{\textit{hope}} \\
+		\midrule
+		\textbf{Stage 0} & \textipa{[h@Ul]} & \textipa{[h@Uli:]} & \textipa{[h@Uli:]} & \textipa{[h@Up]} \\
+		\textbf{Stage 1} &	\cellcolor{PeachPearPeach}\textipa{[hOul]} & \textipa{[h@Uli:]} & \textipa{[h@Uli:]} & \textipa{[h@Up]} \\
+		\textbf{Stage 2} & \cellcolor{PeachPearPeach}\textipa{[hOul]} & \cellcolor{PeachPearPeach}\textipa{[hOuli:]} & \textipa{[h@Uli:]} & \textipa{[h@Up]} \\
+		\textbf{Stage 3} & \cellcolor{PeachPearPeach}\textipa{[hOul]} & \cellcolor{PeachPearPeach}\textipa{[hOuli:]} & \cellcolor{PeachPearPeach}\textipa{[hOuli:]} & \textipa{[h@Up]} \\
+		\bottomrule
+	\end{tabular}
+	\caption{Life cycle of Phonological Processes \protect\citep{BermudezOtero2007,BermudezOtero2012}}
+	\label{tbl:lifecycle}
+\end{table}
+
+The theory of the life cycle of phonological processes \citep{BermudezOtero2015} suggests a change moving through levels of the grammar. In this context that would be the back of the \goat{} vowel in pre-/l/ position. This would lead to potential degress of the changed that can be described as level, as shown in table \ref{tbl:lifecycle}. The CoRP-SE speakers could be considered as sitting at stage 1 or 2 of the life cycle.
+
+The CoRP-NE speakers have the same diphthong in all three pre-/l/ positions, indicating stage 3 of the life cycle. In this they differ from both the DECTE and CoRP-SE speakers, leading to the question as to where their pattern has come from. I propose two potential explanations.
+\begin{enumerate}
+	\item Stage 3 is a further stage in the change. It is possible that the he split in the North East has progressed further after the South East had stopped changing, or the change has simply progressed faster than in the South East. 
+	\item The split moved to the North East after reaching stage 2 and the morphological complexity has been reanalysed and simplified to a phonological rule that applies pre-\ipa{l} whether dark or not and whatever the position in the syllable.
+\end{enumerate}
+
+Both of these potential explanations can only be possible if the RP speech community in the North East is varying and changing in at least some way separately to the RP speech community in the South East, rather than acquiring and following exactly the changes from the South East as suggested by \citet{Trudgill2008}.
+
+In answer to research questions \ref{RQ1} and \ref{RQ3} the CoRP-NE speakers behave regionally in terms of their \goat{} vowel and monosyllabic \GG{} split but in terms of the morphological conditioning of the split are not behaving in a regional or non-regional manner.
+
+In answer to research question \ref{RQ2}, the results suggest that the proposed non-regional speech community is not homogeneously non-regional, but instead has regional variation, to at least some extent.
+
+
+
+\onlyinsubfile{
+	\listoftodos
+	\pagebreak
+	\bibliography{../../../References/methodology,
+		../../../References/rRP,
+		../../../References/goatAllophony,
+		../../../References/tynesideEnglish
+	}
+	}
+	
+	
+\end{document} 

@@ -1,0 +1,7 @@
+"0","```r
+xvals <- seq(from = -3, to = 3, by = 0.1) # random numbers
+mypreds <- tibble(x = xvals)
+
+mypreds$fit <- predict(xmdl, newdata = mypreds)
+mypreds
+```"

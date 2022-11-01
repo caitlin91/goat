@@ -1,0 +1,57 @@
+This is BibTeX, Version 0.99d
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: Analysis-goat.aux
+Reallocating 'name_of_file' (item size: 1) to 5 items.
+The style file: agsm.bst
+Reallocating 'name_of_file' (item size: 1) to 32 items.
+Reallocating 'name_of_file' (item size: 1) to 24 items.
+Reallocating 'name_of_file' (item size: 1) to 34 items.
+Reallocating 'name_of_file' (item size: 1) to 36 items.
+Database file #1: ../../../References/methodology.bib
+Database file #2: ../../../References/rRP.bib
+Database file #3: ../../../References/goatAllophony.bib
+Database file #4: ../../../References/tynesideEnglish.bib
+Warning--I didn't find a database entry for "Stanley2021"
+Warning--there's a number but no series in BermudezOtero2012
+You've used 8 entries,
+            2909 wiz_defined-function locations,
+            697 strings with 6514 characters,
+and the built_in function-call counts, 29548 in all, are:
+= -- 4824
+> -- 300
+< -- 1
++ -- 2249
+- -- 89
+* -- 2458
+:= -- 6007
+add.period$ -- 8
+call.type$ -- 8
+change.case$ -- 112
+chr.to.int$ -- 8
+cite$ -- 9
+duplicate$ -- 138
+empty$ -- 268
+format.name$ -- 110
+if$ -- 5305
+int.to.chr$ -- 5
+int.to.str$ -- 0
+missing$ -- 7
+newline$ -- 30
+num.names$ -- 87
+pop$ -- 55
+preamble$ -- 1
+purify$ -- 120
+quote$ -- 0
+skip$ -- 113
+stack$ -- 0
+substring$ -- 6778
+swap$ -- 27
+text.length$ -- 113
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 30
+warning$ -- 1
+while$ -- 177
+width$ -- 0
+write$ -- 110
+(There were 2 warnings)

@@ -1,0 +1,3 @@
+File	Segment	Position	Code1	Code2	Seg_Start	Seg_End	Word	Word_Start	Word_End	Pre_Seg	Pre_Seg_Start	Pre_Seg_End	Post_Seg	Post_Seg_Start	Post_Seg_End	Post_Word Window	Vowels_per_Second	Comments	Warnings
+File	Segment	Position	Code1	Code2	Seg_Start	Seg_End	Word	Word_Start	Word_End	Pre_Seg	Pre_Seg_Start	Pre_Seg_End	Post_Seg	Post_Seg_Start	Post_Seg_End	Post_Word Window	Vowels_per_Second	Comments	Warnings
+File	Segment	Position	Code1	Code2	Seg_Start	Seg_End	Word	Word_Start	Word_End	Pre_Seg	Pre_Seg_Start	Pre_Seg_End	Post_Seg	Post_Seg_Start	Post_Seg_End	Post_Word Window	Vowels_per_Second	Comments	Warnings

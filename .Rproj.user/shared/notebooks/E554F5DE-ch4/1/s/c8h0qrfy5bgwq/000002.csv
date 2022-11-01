@@ -1,0 +1,5 @@
+"0","```r
+error <- rnorm(50)
+y <- 10 + 3 * x + error #notice the similarity between this command and the regression equation
+plot(x, y, pch = 19)
+```"

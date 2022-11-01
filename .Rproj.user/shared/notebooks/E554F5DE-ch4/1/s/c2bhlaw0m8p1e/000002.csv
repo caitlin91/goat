@@ -1,0 +1,5 @@
+"0","```r
+data_ELP <- read_csv(\"data/â€˜ELP_frequency.csv\")
+```"
+"1","Error: 'data/â€˜ELP_frequency.csv' does not exist in current working directory ('C:/Users/Caitlin Halfacre/OneDrive - Newcastle University/Documents/Linguistics/PhD/StatsTraining/Winter2019/scripts').
+"

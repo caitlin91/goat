@@ -1,0 +1,6 @@
+"0","```r
+mydf <- tibble(x, y)
+xmdl <- lm(y ~ x, data = mydf)
+# Print tidy coefficient table to console, turns the model output into a data frame:
+tidy(xmdl)
+```"

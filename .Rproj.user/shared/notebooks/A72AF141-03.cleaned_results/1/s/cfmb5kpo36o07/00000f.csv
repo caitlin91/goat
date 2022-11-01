@@ -1,0 +1,46 @@
+"0","# do country regions
+DF$CountryCode <- countrycode(sourcevar = DF$CountryAuthor,
+                              origin = 'country.name', 
+                              destination = 'un.regionsub.name')
+"
+"2","Warning: Some values were not matched unambiguously: Ghana, Estonia, Taiwan
+"
+"2","Warning: Some strings were matched more than once, and therefore set to <NA> in the result: Ghana, Estonia,Northern Europe,Sub-Saharan Africa
+"
+"0","# do country regions"
+"0","DF$CountryCode <- countrycode(sourcevar = DF$CountryAuthor,"
+"0","                              origin = 'country.name', "
+"0","                              destination = 'un.regionsub.name')"
+"2","Warning: Some values were not matched unambiguously: Ghana, Estonia, Taiwan
+"
+"2","Warning: Some strings were matched more than once, and therefore set to <NA> in the result: Ghana, Estonia,Northern Europe,Sub-Saharan Africa
+"
+"0","DF$CountryCode[is.na(DF$CountryCode)] <- ""Unknown"""
+"0","DF$CountryCode[DF$CountryAuthor == ""Taiwan""] <- ""Eastern Asia"""
+"0","DF$CountryCode2 <- DF$CountryCode"
+"0","DF$CountryCode2 <- gsub("".* Asia.*"", ""Asia"", DF$CountryCode2)"
+"0","DF$CountryCode2 <- gsub(""Melanesia|.*Africa.*|.*Latin America.*"", ""Other"", DF$CountryCode2)"
+"0","DF$CountryCode2 <- "
+"0","  factor(DF$CountryCode2, "
+"0","         levels = c(""Unknown"", ""Other"", ""Eastern Europe"", "
+"0","                    ""Australia and New Zealand"", ""Southern Europe"",  "
+"0","                     ""Western Europe"", ""Northern Europe"", ""Asia"", "
+"0","                    ""Northern America""))"
+"0","country_summary <- DF %>% "
+"0","      group_by(year_split, CountryCode2) %>% "
+"0","      summarize(n = n(), .groups = ""keep"") %>% "
+"0","  group_by(year_split) %>% "
+"0","  mutate(prop = round(n / sum(n)*100, 1)) %>% "
+"0","  arrange(desc(CountryCode2)) %>% "
+"0","  mutate(pos = cumsum(prop)-.5*(prop))"
+"1","[1m[33mError[39m in [38;5;255m`n()`[39m:[22m
+[38;5;255m[33m![38;5;255m Must be used inside dplyr verbs.[39m
+Backtrace:
+[90m  1. [39m... %>% mutate(pos = cumsum(prop) - 0.5 * (prop))
+[90m 12. [39m[1mplyr[22m::summarize(., n = n(), .groups = ""keep"")
+[90m 13. [39m[1mbase[22m::eval(cols[[col]], .data, parent.frame())
+[90m 14. [39mbase::eval(cols[[col]], .data, parent.frame())
+[90m 15. [39m[1mdplyr[22m::n()
+[90m 16. [39mdplyr:::peek_mask(""n"")
+[90m 17. [39mdplyr:::context_peek(""mask"", fun)
+"

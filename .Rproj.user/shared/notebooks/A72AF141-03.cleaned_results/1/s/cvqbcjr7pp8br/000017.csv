@@ -1,0 +1,12 @@
+"0","# please someone make this in one pipeline
+freq_split <- lang_summary_all %>% 
+  group_by(year_split) %>% 
+  dplyr::summarise(frequency_split = sum(frequency), .groups = ""keep"") %>% 
+  ungroup() %>% 
+  full_join(lang_summary_all) %>% 
+  mutate(prop = round(frequency / frequency_split, 3) * 100) %>% 
+  group_by(year_split) %>% 
+  arrange(desc(prop)) %>%
+  ungroup()
+"
+"2","Joining, by = ""year_split"""

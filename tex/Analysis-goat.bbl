@@ -1,0 +1,51 @@
+\begin{thebibliography}{xx}
+
+\harvarditem{{Berm{\'u}dez-Otero}}{2007}{BermudezOtero2007}
+{Berm{\'u}dez-Otero}, R.  \harvardyearleft 2007\harvardyearright , Diachronic
+  {{Phonology}}, {\em in} P.~{de Lacy}, ed., `The {{Cambridge}} Handbook of
+  Phonology', {Cambridge University Press}, {Cambridge}, pp.~497--517.
+
+\harvarditem{{Berm{\'u}dez-Otero}}{2015}{BermudezOtero2015}
+{Berm{\'u}dez-Otero}, R.  \harvardyearleft 2015\harvardyearright , Amphichronic
+  explanation and the life cycle of phonological processes, {\em in}
+  P.~Honeybone \harvardand\ J.~C. Salmons, eds, `The {{Oxford Handbook}} of
+  {{Historical Phonology}}', {Oxford University Press}, {Oxford}.
+
+\harvarditem{{Berm{\'u}dez-Otero} \harvardand\
+  Trousdale}{2012}{BermudezOtero2012}
+{Berm{\'u}dez-Otero}, R. \harvardand\ Trousdale, G.  \harvardyearleft
+  2012\harvardyearright , Cycles and continua: {{On}} unidirectionality and
+  gradualness in language change, {\em in} T.~Nevalainen \harvardand\ E.~C.
+  Traugott, eds, `The \{\vphantom\}{{Oxford}}\vphantom\{\} Handbook of the
+  History of \{\vphantom\}{{English}}\vphantom\{\}', number January 2019,
+  {Oxford University Press}, {Oxford}, pp.~691--720.
+\newline\harvardurl{http://oxfordhandbooks.com/view/10.1093/oxfordhb/9780199922765.001.0001/oxfordhb-9780199922765-e-59}
+
+\harvarditem{Coretta}{2020}{tidymv2020}
+Coretta, S.  \harvardyearleft 2020\harvardyearright , `Tidymv: {{Tidy Model
+  Visualisation}} for {{Generalised Additive Models}}'.
+\newline\harvardurl{https://CRAN.R-project.org/package=tidymv}
+
+\harvarditem{S{\'o}skuthy}{2017}{Soskuthy2017}
+S{\'o}skuthy, M.  \harvardyearleft 2017\harvardyearright , `Generalised
+  additive mixed models for dynamic analysis in linguistics: A practical
+  introduction'.
+\newline\harvardurl{http://arxiv.org/abs/1703.05339}
+
+\harvarditem{Trudgill}{2008}{Trudgill2008}
+Trudgill, P.  \harvardyearleft 2008\harvardyearright , `{{THE HISTORICAL
+  SOCIOLINGUISTICS OF ELITE ACCENT CHANGE}}: {{ON WHY RP IS NOT
+  DISAPPEARING}}', {\em Studia Anglica Posnaniensia} {\bf 44}.
+
+\harvarditem[{van Rij} et~al.]{{van Rij}, Wieling, Baayen \harvardand\ {van
+  Rijn}}{2020}{itsadug}
+{van Rij}, J., Wieling, M., Baayen, R.~H. \harvardand\ {van Rijn}, H.
+  \harvardyearleft 2020\harvardyearright , `\{itsadug\}: {{Interpreting Time
+  Series}} and {{Autocorrelated Data Using GAMMs}}'.
+
+\harvarditem{Wood}{2017}{mgcv}
+Wood, S.~N.  \harvardyearleft 2017\harvardyearright , {\em Generalized
+  {{Additive Models}}: {{An Introduction}} with {{R}}}, second edn, {Chapman
+  and Hall/CRC}.
+
+\end{thebibliography}

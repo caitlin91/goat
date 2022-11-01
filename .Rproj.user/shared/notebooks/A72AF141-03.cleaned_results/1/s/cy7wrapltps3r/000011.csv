@@ -1,0 +1,55 @@
+"0","library(rio)"
+"2","Registered S3 method overwritten by 'data.table':
+  method           from
+  print.data.table     
+"
+"2","The following rio suggested packages are not installed: ‘arrow’, ‘feather’, ‘fst’, ‘hexView’, ‘pzfx’, ‘readODS’, ‘rmatio’
+Use 'install_formats()' to install them
+"
+"0","library(dplyr)"
+"0","library(stringi)"
+"0","library(tidyr)"
+"0","library(psych)"
+"2","
+Attaching package: ‘psych’
+
+"
+"2","The following objects are masked from ‘package:ggplot2’:
+
+    %+%, alpha
+
+"
+"0","library(ggplot2)"
+"0","library(maps)"
+"2","
+Attaching package: ‘maps’
+
+"
+"2","The following object is masked from ‘package:plyr’:
+
+    ozone
+
+"
+"2","The following object is masked from ‘package:purrr’:
+
+    map
+
+"
+"0","library(countrycode)"
+"0","library(webr)"
+"2","Registered S3 method overwritten by 'htmlwidgets':
+  method           from         
+  print.htmlwidget tools:rstudio
+"
+"0","library(patchwork)"
+"0","library(papaja)"
+"2","Loading required package: tinylabels
+"
+"0","library(RColorBrewer)"
+"0","library(ggdist)"
+"0","library(forcats)"
+"0",""
+"0",""
+"0",""
+"0","# define handy function "
+"0","'%!in%' <- function(x,y)!('%in%'(x,y))"

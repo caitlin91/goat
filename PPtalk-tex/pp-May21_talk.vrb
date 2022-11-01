@@ -1,0 +1,12 @@
+\frametitle{Code}
+\begin{block}{NE gamm}
+		\begin{lstlisting}[language=R]
+				NE.dur.gamm <- bam(F2 ~ lexSet_ord +
+				s(measurement.no) +
+				s(dur, bs="cr") +
+				ti(measurement.no, dur) +
+				s(measurement.no, by=lexSet_ord, bs="cr") +
+				s(measurement.no, traj, bs="fs", xt="cr", m=1, k=5),
+				data=data_NE,method="fREML", nthreads = all_cores)
+		\end{lstlisting}
+		\end{block}

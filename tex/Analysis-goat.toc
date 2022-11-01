@@ -1,0 +1,35 @@
+\contentsline {section}{\numberline {0.1}Introduction}{4}{section.0.1}%
+\contentsline {section}{\numberline {0.2}Modelling of the \textsc {goat}{} vowel}{4}{section.0.2}%
+\contentsline {section}{\numberline {0.3}\textsc {Goat} vowel in \textit {hope} context only}{6}{section.0.3}%
+\contentsline {subsection}{\numberline {0.3.1}\textit {hope}{} F1}{6}{subsection.0.3.1}%
+\contentsline {subsection}{\numberline {0.3.2}\textit {hope}{} F2}{9}{subsection.0.3.2}%
+\contentsline {subsection}{\numberline {0.3.3}\textit {hope} context summary}{12}{subsection.0.3.3}%
+\contentsline {section}{\numberline {0.4}The \textsc {goat}{} split in monosyllabic environments (\textit {hope}{} vs \textit {hole}{})}{13}{section.0.4}%
+\contentsline {subsection}{\numberline {0.4.1}The \textsc {goat}-\textsc {goal}{} split in CoRP-SE speakers}{13}{subsection.0.4.1}%
+\contentsline {subsubsection}{\numberline {0.4.1.1}F1 of the CoRP-SE speakers}{13}{subsubsection.0.4.1.1}%
+\contentsline {subsubsection}{\numberline {0.4.1.2}F2 of the CoRP-SE speakers}{16}{subsubsection.0.4.1.2}%
+\contentsline {subsection}{\numberline {0.4.2}DECTE}{18}{subsection.0.4.2}%
+\contentsline {subsubsection}{\numberline {0.4.2.1}F1 of the DECTE speakers}{18}{subsubsection.0.4.2.1}%
+\contentsline {subsubsection}{\numberline {0.4.2.2}F2 of the DECTE speakers}{22}{subsubsection.0.4.2.2}%
+\contentsline {subsection}{\numberline {0.4.3}CoRP-NE}{24}{subsection.0.4.3}%
+\contentsline {subsubsection}{\numberline {0.4.3.1}F1 of the CoRP-NE speakers}{24}{subsubsection.0.4.3.1}%
+\contentsline {subsubsection}{\numberline {0.4.3.2}F2 of the CoRP-NE speakers}{26}{subsubsection.0.4.3.2}%
+\contentsline {subsection}{\numberline {0.4.4}Direct Comparison of the \textsc {Goat-Goal} split in all three speaker groups}{29}{subsection.0.4.4}%
+\contentsline {subsubsection}{\numberline {0.4.4.1}\textsc {Goat-Goal} F1 comparison}{29}{subsubsection.0.4.4.1}%
+\contentsline {subsubsection}{\numberline {0.4.4.2}\textsc {Goat-Goal} F2 comparison}{31}{subsubsection.0.4.4.2}%
+\contentsline {section}{\numberline {0.5}Morpho-phonological Conditioning of the \textsc {goal}{} context (\textit {hole, holy, holey})}{33}{section.0.5}%
+\contentsline {subsection}{\numberline {0.5.1}Morpho-phonological Conditioning in CoRP-SE}{33}{subsection.0.5.1}%
+\contentsline {subsubsection}{\numberline {0.5.1.1}CoRP-SE F1}{33}{subsubsection.0.5.1.1}%
+\contentsline {subsubsection}{\numberline {0.5.1.2}CoRP-SE F2}{37}{subsubsection.0.5.1.2}%
+\contentsline {subsection}{\numberline {0.5.2}Morpho-phonological Conditioning in DECTE}{41}{subsection.0.5.2}%
+\contentsline {subsubsection}{\numberline {0.5.2.1}DECTE F1}{41}{subsubsection.0.5.2.1}%
+\contentsline {subsubsection}{\numberline {0.5.2.2}DECTE F2}{43}{subsubsection.0.5.2.2}%
+\contentsline {subsection}{\numberline {0.5.3}Morpho-phonological Conditioning in CoRP-NE}{45}{subsection.0.5.3}%
+\contentsline {subsubsection}{\numberline {0.5.3.1}CoRP-NE F1}{45}{subsubsection.0.5.3.1}%
+\contentsline {subsubsection}{\numberline {0.5.3.2}CoRP-NE F2}{48}{subsubsection.0.5.3.2}%
+\contentsline {subsection}{\numberline {0.5.4}Direct Comparison of the pre-/l/ contexts in all three speaker groups}{51}{subsection.0.5.4}%
+\contentsline {subsubsection}{\numberline {0.5.4.1}pre-/l/ F1 comparison}{51}{subsubsection.0.5.4.1}%
+\contentsline {subsubsection}{\numberline {0.5.4.2}pre-/l/ F2 comparison}{53}{subsubsection.0.5.4.2}%
+\contentsline {section}{\numberline {0.6}Conclusion}{55}{section.0.6}%
+\contentsline {chapter}{\nonumberline Bibliography}{57}{chapter*.50}%
+\providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

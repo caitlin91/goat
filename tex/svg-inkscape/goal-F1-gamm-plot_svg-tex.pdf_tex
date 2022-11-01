@@ -1,0 +1,178 @@
+%% Creator: Inkscape 1.1 (c68e22c387, 2021-05-23), www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'goal-F1-gamm-plot_svg-tex.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{864bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.66666667)%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{goal-F1-gamm-plot_svg-tex.pdf}}%
+    \put(0.21129629,0.31328703){\color[rgb]{0.10196078,0.10196078,0.10196078}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Male\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{goal-F1-gamm-plot_svg-tex.pdf}}%
+    \put(0.21129629,0.29371527){\color[rgb]{0.10196078,0.10196078,0.10196078}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Old\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{goal-F1-gamm-plot_svg-tex.pdf}}%
+    \put(0.36417823,0.31328703){\color[rgb]{0.10196078,0.10196078,0.10196078}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Male\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{goal-F1-gamm-plot_svg-tex.pdf}}%
+    \put(0.36417823,0.29371527){\color[rgb]{0.10196078,0.10196078,0.10196078}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Young\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=5]{goal-F1-gamm-plot_svg-tex.pdf}}%
+    \put(0.21129629,0.60356481){\color[rgb]{0.10196078,0.10196078,0.10196078}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Female\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=6]{goal-F1-gamm-plot_svg-tex.pdf}}%
+    \put(0.21129629,0.58398148){\color[rgb]{0.10196078,0.10196078,0.10196078}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Old\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=7]{goal-F1-gamm-plot_svg-tex.pdf}}%
+    \put(0.36417823,0.60356481){\color[rgb]{0.10196078,0.10196078,0.10196078}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Female\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=8]{goal-F1-gamm-plot_svg-tex.pdf}}%
+    \put(0.36417823,0.58398148){\color[rgb]{0.10196078,0.10196078,0.10196078}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Young\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=9]{goal-F1-gamm-plot_svg-tex.pdf}}%
+    \put(0.1446875,0.02979166){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}0\end{tabular}}}}%
+    \put(0.21129629,0.02979166){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}50\end{tabular}}}}%
+    \put(0.27790509,0.02979166){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}100\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=10]{goal-F1-gamm-plot_svg-tex.pdf}}%
+    \put(0.29756945,0.02979166){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}0\end{tabular}}}}%
+    \put(0.36417823,0.02979166){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}50\end{tabular}}}}%
+    \put(0.43078705,0.02979166){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}100\end{tabular}}}}%
+    \put(0.13231481,0.34054399){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}300\end{tabular}}}}%
+    \put(0.13231481,0.38505787){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}400\end{tabular}}}}%
+    \put(0.13231481,0.42956018){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}500\end{tabular}}}}%
+    \put(0.13231481,0.4740625){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}600\end{tabular}}}}%
+    \put(0.13231481,0.51856482){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}700\end{tabular}}}}%
+    \put(0.13231481,0.56306713){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}800\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=11]{goal-F1-gamm-plot_svg-tex.pdf}}%
+    \put(0.13231481,0.05027778){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}300\end{tabular}}}}%
+    \put(0.13231481,0.09478011){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}400\end{tabular}}}}%
+    \put(0.13231481,0.1392824){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}500\end{tabular}}}}%
+    \put(0.13231481,0.18378473){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}600\end{tabular}}}}%
+    \put(0.13231481,0.22828703){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}700\end{tabular}}}}%
+    \put(0.13231481,0.27278935){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}800\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=12]{goal-F1-gamm-plot_svg-tex.pdf}}%
+    \put(0.28773148,0.0153704){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Percentage duration through the vowel\end{tabular}}}}%
+    \put(0.10945602,0.3103125){\rotatebox{90}{\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Model fit F1 (Hz)\end{tabular}}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=13]{goal-F1-gamm-plot_svg-tex.pdf}}%
+    \put(0.05017361,0.42893519){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Lexical Set\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=14]{goal-F1-gamm-plot_svg-tex.pdf}}%
+    \put(0.04537037,0.40813658){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}hole\end{tabular}}}}%
+    \put(0.04537037,0.38813658){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}holey\end{tabular}}}}%
+    \put(0.04537037,0.36813658){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}holy\end{tabular}}}}%
+    \put(0.04537037,0.34813658){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}hole\end{tabular}}}}%
+    \put(0.04537037,0.32813659){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}holey\end{tabular}}}}%
+    \put(0.04537037,0.30813659){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}holy\end{tabular}}}}%
+    \put(0.04537037,0.28813659){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}hole\end{tabular}}}}%
+    \put(0.04537037,0.26813659){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}holey\end{tabular}}}}%
+    \put(0.04537037,0.24813659){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}holy\end{tabular}}}}%
+    \put(0.04537037,0.22813656){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}hole\end{tabular}}}}%
+    \put(0.04537037,0.20813656){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}holey\end{tabular}}}}%
+    \put(0.04537037,0.18813656){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}holy\end{tabular}}}}%
+    \put(0.13802083,0.62655093){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}CoRP-SE\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=15]{goal-F1-gamm-plot_svg-tex.pdf}}%
+    \put(0.56108796,0.31328703){\color[rgb]{0.10196078,0.10196078,0.10196078}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Male\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=16]{goal-F1-gamm-plot_svg-tex.pdf}}%
+    \put(0.56108796,0.29371527){\color[rgb]{0.10196078,0.10196078,0.10196078}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Old\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=17]{goal-F1-gamm-plot_svg-tex.pdf}}%
+    \put(0.7139699,0.31328703){\color[rgb]{0.10196078,0.10196078,0.10196078}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Male\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=18]{goal-F1-gamm-plot_svg-tex.pdf}}%
+    \put(0.7139699,0.29371527){\color[rgb]{0.10196078,0.10196078,0.10196078}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Young\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=19]{goal-F1-gamm-plot_svg-tex.pdf}}%
+    \put(0.56108796,0.60356481){\color[rgb]{0.10196078,0.10196078,0.10196078}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Female\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=20]{goal-F1-gamm-plot_svg-tex.pdf}}%
+    \put(0.56108796,0.58398148){\color[rgb]{0.10196078,0.10196078,0.10196078}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Old\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=21]{goal-F1-gamm-plot_svg-tex.pdf}}%
+    \put(0.7139699,0.60356481){\color[rgb]{0.10196078,0.10196078,0.10196078}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Female\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=22]{goal-F1-gamm-plot_svg-tex.pdf}}%
+    \put(0.7139699,0.58398148){\color[rgb]{0.10196078,0.10196078,0.10196078}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Young\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=23]{goal-F1-gamm-plot_svg-tex.pdf}}%
+    \put(0.49446759,0.02979166){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}0\end{tabular}}}}%
+    \put(0.56108796,0.02979166){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}50\end{tabular}}}}%
+    \put(0.62769678,0.02979166){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}100\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=24]{goal-F1-gamm-plot_svg-tex.pdf}}%
+    \put(0.64736112,0.02979166){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}0\end{tabular}}}}%
+    \put(0.7139699,0.02979166){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}50\end{tabular}}}}%
+    \put(0.78057868,0.02979166){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}100\end{tabular}}}}%
+    \put(0.48210649,0.34054399){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}300\end{tabular}}}}%
+    \put(0.48210649,0.38505787){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}400\end{tabular}}}}%
+    \put(0.48210649,0.42956018){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}500\end{tabular}}}}%
+    \put(0.48210649,0.4740625){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}600\end{tabular}}}}%
+    \put(0.48210649,0.51856482){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}700\end{tabular}}}}%
+    \put(0.48210649,0.56306713){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}800\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=25]{goal-F1-gamm-plot_svg-tex.pdf}}%
+    \put(0.48210649,0.05027778){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}300\end{tabular}}}}%
+    \put(0.48210649,0.09478011){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}400\end{tabular}}}}%
+    \put(0.48210649,0.1392824){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}500\end{tabular}}}}%
+    \put(0.48210649,0.18378473){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}600\end{tabular}}}}%
+    \put(0.48210649,0.22828703){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}700\end{tabular}}}}%
+    \put(0.48210649,0.27278935){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}800\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=26]{goal-F1-gamm-plot_svg-tex.pdf}}%
+    \put(0.63752315,0.0153704){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Percentage duration through the vowel\end{tabular}}}}%
+    \put(0.45924769,0.3103125){\rotatebox{90}{\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Model fit F1 (Hz)\end{tabular}}}}}%
+    \put(0.4878125,0.62655093){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}CoRP-NE\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=27]{goal-F1-gamm-plot_svg-tex.pdf}}%
+    \put(0.83189816,0.33354166){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}300\end{tabular}}}}%
+    \put(0.83189816,0.37938657){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}400\end{tabular}}}}%
+    \put(0.83189816,0.42521991){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}500\end{tabular}}}}%
+    \put(0.83189816,0.47105325){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}600\end{tabular}}}}%
+    \put(0.83189816,0.51689816){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}700\end{tabular}}}}%
+    \put(0.83189816,0.56273148){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}800\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=28]{goal-F1-gamm-plot_svg-tex.pdf}}%
+    \put(0.80903935,0.45178241){\rotatebox{90}{\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Model fit F1 (Hz)\end{tabular}}}}}%
+    \put(0.83760417,0.64304398){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}DECTE \end{tabular}}}}%
+    \put(0.83760417,0.62655093){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}(repeated for comparison)\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=29]{goal-F1-gamm-plot_svg-tex.pdf}}%
+    \put(0.83189816,0.0506134){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}300\end{tabular}}}}%
+    \put(0.83189816,0.09644674){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}400\end{tabular}}}}%
+    \put(0.83189816,0.14228008){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}500\end{tabular}}}}%
+    \put(0.83189816,0.18812501){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}600\end{tabular}}}}%
+    \put(0.83189816,0.23395835){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}700\end{tabular}}}}%
+    \put(0.83189816,0.27980324){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}800\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=30]{goal-F1-gamm-plot_svg-tex.pdf}}%
+    \put(0.84440973,0.02979166){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}0\end{tabular}}}}%
+    \put(0.91245369,0.02979166){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}50\end{tabular}}}}%
+    \put(0.98050923,0.02979166){\color[rgb]{0.30196078,0.30196078,0.30196078}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}100\end{tabular}}}}%
+    \put(0.91245368,0.0153704){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Percentage duration through the vowel\end{tabular}}}}%
+    \put(0.80903935,0.16885417){\rotatebox{90}{\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Model fit F1 (Hz)\end{tabular}}}}}%
+  \end{picture}%
+\endgroup%

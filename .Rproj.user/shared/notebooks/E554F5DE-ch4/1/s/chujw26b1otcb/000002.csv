@@ -1,0 +1,6 @@
+"0","```r
+mydf %>% ggplot(aes(x = x, y = y)) +
+  geom_point() +
+  geom_smooth(method = 'lm') +
+  theme_bw()
+```"

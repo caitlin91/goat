@@ -1,0 +1,42 @@
+"0","```r
+head(fitted(xmdl))
+```"
+"1","        1         2         3         4 
+13.570685  8.349862  8.415542  6.249459 
+        5         6 
+ 9.345661 11.447904 
+"
+"0","```r
+head(residuals(xmdl))
+```"
+"1","          1           2           3           4 
+ 0.78567723  0.92096266 -1.41704255  0.98553078 
+          5           6 
+-0.02548654 -0.81914786 
+"
+"0","```r
+summary(xmdl)
+```"
+"1","
+Call:
+lm(formula = y ~ x)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-1.93590 -0.61254 -0.01573  0.69732  1.91234 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)
+(Intercept)   9.8831     0.1439   68.69   <2e-16
+x             2.9063     0.1456   19.96   <2e-16
+               
+(Intercept) ***
+x           ***
+---
+Signif. codes:  
+0 â€˜***â€™ 0.001 â€˜**â€™ 0.01 â€˜*â€™ 0.05 â€˜.â€™ 0.1 â€˜ â€™ 1
+
+Residual standard error: 1.013 on 48 degrees of freedom
+Multiple R-squared:  0.8924,	Adjusted R-squared:  0.8902 
+F-statistic: 398.2 on 1 and 48 DF,  p-value: < 2.2e-16
+"

@@ -1,0 +1,10 @@
+"0","```r
+
+# Extract estimate column from coefficient table:
+tidy(xmdl)$estimate
+```"
+"1","[1] 9.883114 2.906299
+"
+"0","```r
+glance(xmdl) # â€˜glanceâ€™ of the overall model performance
+```"

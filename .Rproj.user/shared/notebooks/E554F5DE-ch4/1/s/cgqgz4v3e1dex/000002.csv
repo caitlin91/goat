@@ -1,0 +1,6 @@
+"0","```r
+x=rnorm(50)
+# Create y's with intercept = 10 and slope = 3:
+y <- 10 + 3 * x
+plot(x, y, pch = 19) # this sort of relationship would never happen!
+```"
